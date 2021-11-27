@@ -1,0 +1,68 @@
+<ion-header class="primary-header browse-page">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title >Sadar Wisata</ion-title>
+    <!-- <ion-input class="search-icon" placeholder="Pangeran..." [routerLink]="'/search/hotel'" slot="end" style="text-align: left;"></ion-input>
+    <ion-icon name="search" color="light" slot="end" style="padding-left: 5px; padding-right: 5px;"></ion-icon> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="tarik untuk segarkan"
+        refreshingSpinner="circles"
+        refreshingText="Segarkan..."></ion-refresher-content>
+      </ion-refresher>
+      
+    <div class="kategori_per_produk" *ngIf="itemsHotel">
+      <ion-grid>
+        <ion-row style="background-color: transparent">
+          <ion-col size="6" class="col-ali" *ngFor="let item of itemsHotel">
+            <div class="menu-image">
+            <ion-thumbnail style="height: 160px; width: 100%;">
+              <img src="{{path?.hotel}}{{item.gambar}}" alt="{{item.nama}}" onError="this.onerror=null; this.src='/assets/icon.png';" [routerLink]="'/detail-hotel/'+ item?.id" routerDirection="forward" onError="this.onerror=null; this.src='/assets/icon.png';">
+            </ion-thumbnail> 
+              <div class="menu-info">
+                <div class="menu-name">{{item.nama}}</div>          
+                <div class="menu-name">{{item.nama_kabupaten}}</div>          
+              </div>
+            </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div>
+    
+    <div class="trends">
+      <ion-slides pager="false" [options]="slideOpts">
+        <ion-slide *ngFor="let restaurant of restaurants" routerLink="/restaurantpage1">
+          <div class="menu-image">
+            <img src="{{restaurant.menu_image}}" alt="">
+            <div class="menu-info">
+              <div class="menu-name">{{ restaurant.menu_name }}</div>
+              <div class="restaurant-name">{{ restaurant.name }}</div>            
+            </div>
+          </div>
+          <ion-row>
+            <ion-col size="6" class="restaurant-reviews">
+              {{ restaurant.rating }} <i class="fas fa-star"></i> <span class="review-counts">( {{restaurant.reviews }})</span>
+            </ion-col>
+            <ion-col size="6" class="menu-price">
+              {{ restaurant.menu_price }}
+            </ion-col>
+          </ion-row>
+          
+        </ion-slide>
+      </ion-slides>
+  
+    </div> 
+      <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+          <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="Lihat lebih banyak...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+</ion-content>

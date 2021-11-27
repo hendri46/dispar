@@ -1,0 +1,61 @@
+<ion-header class="full-header browse-page">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="only-button">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Address Book</ion-title>
+    <ion-buttons slot="end">
+        <ion-button  fill="clear" color="light" (click)="addAddress()">Add</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  
+
+<ion-content class="address-list">
+    <ion-list>
+        <ion-list-header>
+            <ion-label>REGISTERED ADDRESSES</ion-label>
+          </ion-list-header>   
+             
+          <ion-item routerLink="/addresslist">
+            <div class="address-icon" >
+                <i class="fas fa-map-signs"></i>
+            </div>
+            <ion-label>
+              <h2>My Home</h2>
+              <p>963 Madyson Suite 679</p>
+            </ion-label>
+          </ion-item> 
+
+          <ion-item routerLink="/addresslist">
+              <div class="address-icon">
+                  <i class="fas fa-map-signs"></i>
+              </div>            
+              <ion-label>
+              <h2>My Home</h2>
+              <p>963 Madyson Suite 679</p>
+            </ion-label>
+          </ion-item>  
+      </ion-list>
+
+
+
+
+      <ion-list>
+          <ion-list-header>
+              <ion-label>NEW ADDRESS</ion-label>
+            </ion-list-header>   
+               
+            <div class="new-address-zone">
+              <p>Please click to add a new address</p>
+              <ion-button class="circle-button" size="large" color="success" (click)="addAddress()"><i color="light" class="fal fa-plus"></i></ion-button>
+            </div>
+  
+
+        </ion-list>
+
+
+
+
+
+</ion-content>

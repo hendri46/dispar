@@ -1,0 +1,146 @@
+<ion-content class="profile-page standard-page" [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Segarkan..."></ion-refresher-content>
+  </ion-refresher>
+  <ion-list class="menu-list">
+    <div class="menu-header" >
+        <div class="menu-cat-img">
+          <div class="menu-image">
+            <ion-thumbnail style="height: 200px; width: 100%;">
+              <img *ngIf="detail?.gambar" src="{{ path['restoran'] }}{{detail?.gambar}}" alt="">
+            </ion-thumbnail>
+          </div>
+            <span class="notify-badge"><ion-back-button defaultHref="/"></ion-back-button></span>
+        </div>
+
+        <h1 class="big-title">{{ detail?.nama }}</h1>
+        <div>
+        <ion-chip>
+          <ion-icon *ngIf="jarak != null" name="compass" color="primary"></ion-icon>
+          <ion-label>{{ jarak }}</ion-label>
+        </ion-chip>
+      </div>
+    </div>
+    <div class="standard-page">
+    <ion-item class="restaurant-actions" lines="none">
+      <ion-buttons class="actions-buttons" slot="start">
+        <ion-button *ngIf="!fav" (click)="presentToastSave(detail)"><i class="far fa-heart"></i></ion-button>
+        <ion-button *ngIf="fav" (click)="presentToastRemove(detail)"><i class="fas fa-heart"></i></ion-button>
+      </ion-buttons>
+
+    </ion-item>
+    </div>
+
+    <div class="standard-page">
+      <ion-item class="restaurant-actions" lines="none">
+
+        <ion-button (click)=arah(detail?.latitude,detail?.longitude) class="contact-button" slot="start">
+          <i class="fas fa-route"></i> 
+          Rute
+        </ion-button>
+      </ion-item>
+      </div>
+
+    <div *ngIf="galeri">
+    <ion-slides class="restaurant-info-slider" pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let item of galeri">
+        <img src="{{ path?.galleryrestoran }}{{item.gambar}}" alt="">
+      </ion-slide>
+    </ion-slides>
+    </div>
+
+    <div class="restaurant-map">
+      <h1>Lokasi</h1>
+      <div #mapElement class="map"></div>        
+    </div>
+
+    <div class="opened-time">
+      <h1>Deskripsi</h1>
+      <ion-list padding-horizontal class="menus ion-text-justify" style="font-size: 12px;" [innerHTML]="detail?.deskripsi">
+
+      </ion-list>          
+    </div>  
+    <div class="info-list">
+      <h1>Status</h1>
+      <ion-list padding-horizontal class="menus">
+        <ion-item>
+          <ion-chip *ngIf="detail?.halal == 1">
+            <ion-icon name="clipboard" color="primary"></ion-icon>
+            <ion-label>Halal</ion-label>
+          </ion-chip>
+          <ion-chip *ngIf="detail?.halal != 1">
+            <ion-icon name="clipboard" color="primary"></ion-icon>
+            <ion-label>Tidak Halal</ion-label>
+          </ion-chip>
+        </ion-item> 
+      </ion-list>          
+    </div>
+    <div class="info-list">
+      <h1>No Handphone</h1>
+      <ion-list padding-horizontal class="menus">
+        <!-- <ion-item href="tel:{{ detail?.nomor_kontak }}">
+          <ion-badge class="ion-text-wrap" color="success">{{ detail?.nomor_kontak }}</ion-badge>
+        </ion-item>  -->
+       <ion-item href="tel:{{ detail?.nomor_kontak }}">
+        <ion-chip>
+          <ion-icon name="call" color="primary"></ion-icon>
+          <ion-label>{{ detail?.nomor_kontak }}</ion-label>
+        </ion-chip>
+        </ion-item>
+      </ion-list>          
+    </div>
+    <div class="trends"  *ngIf="menu != '' && menu != null">
+      <h1>Menu</h1>
+      <ion-slides pager="false" [options]="slideOpts">
+        <ion-slide *ngFor="let item of menuResto">
+          <div class="menu-image">
+            <img *ngIf="item?.gambar != null"  src="{{ path['menu'] }}{{item?.gambar}}" alt="">
+            <div class="menu-info">
+              <div class="menu-name">{{ item?.nama }}</div>           
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <!-- <div class="trends">
+      <h1>Terdekat</h1>
+      <ion-slides pager="false" [options]="slideOpts">
+        <ion-slide *ngFor="let terdekat of terdekat" [routerLink]="'/detail-restoran/'+ terdekat?.id" routerDirection="forward">
+          <div class="menu-image">
+            <ion-thumbnail style="height: 160px; width: 100%;">
+              <img src="{{ path['restoran'] }}{{terdekat.gambar}}" alt="">
+            </ion-thumbnail> 
+            <div class="menu-info">
+              <div class="menu-name ion-text-wrap">{{ terdekat.nama }}</div>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div> -->
+
+    <div class="favorites-zone reviews-zone">
+      <h1>Restaurant Terdekat</h1>
+      <ion-list class="favorites">
+          <ion-item-sliding *ngFor="let item of terdekat">
+              <ion-item lines="none" [routerLink]="'/detail-restoran/'+ item?.id" routerDirection="forward">
+                <div class="restaurant-image">
+                  <img src="{{path?.restoran}}{{item.gambar}}">
+                </div>                  
+                <ion-label>
+                  <h2 class="ion-text-wrap">{{ item.nama }}</h2>
+                </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+        </ion-list>  
+    </div>
+
+  </ion-list>
+
+</ion-content>
+
+

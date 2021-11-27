@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button color="success"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="success"></ion-title>     
+    <ion-buttons slot="end">
+        <ion-button class="addtocart" icon-only fill="clear" (click)="opencartPage()">
+          <i class="fal fa-shopping-basket"><ion-badge *ngIf="menusInCart.length" >{{menusInCart.length}}</ion-badge></i>
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="menu-page">
+  <ion-list class="menu-list">
+    <div class="menu-header">
+        <div class="menu-cat-img">
+            <img src="./../assets/images/restaurants/lists/2.jpg" alt="">
+        </div>
+        <div class="menu-cat-texts">
+          <h2>SALADS</h2>
+          <p>A cold dish of various mixtures of raw or cooked vegetables, usually seasoned with oil.</p>
+        </div>
+    </div>
+
+    <ion-item class="menus" *ngFor="let menu of menus; let i = index">
+      <div class="menu-content">
+        <div class="show-content" (click)="toogleSection(i)">
+            <div class="menu-add-click">
+                <i class="fal fa-plus" *ngIf="!menu.open"></i>
+                <i class="far fa-minus" *ngIf="menu.open"></i>
+              </div>
+              <h2>
+                {{menu.name}}
+                <i class="far fa-info-circle"></i>
+                <span class="allergens-text">
+                  {{menu.allergens}}
+                </span>
+              </h2>
+              <p class="default-text">{{menu.desc}}</p>
+              <ul *ngIf="menu.sub_content.length != 0">
+                <li *ngFor="let sublist of menu.sub_content"> {{sublist}} </li>
+              </ul>
+              <p class="menu-meal-type">{{menu.meal_type}} </p>
+              <p *ngIf="menu.ex_price.length != 0" class="menu-ex_price-text">{{menu.ex_price}} </p>
+              <p class="menu-price-text">{{menu.price}} </p>          
+        </div>
+
+        <div class="hidden-content" [ngClass]="{'section-active': menu.open, 'section': !menu.open}">
+          
+          
+          <ion-list class="groups">
+              <ion-list-header>
+                <ion-label>SELECT PIZZA SIZES</ion-label>
+              </ion-list-header> 
+              <ion-item class="ion-select-box">
+                  <ion-select placeholder="Select Size" interface="action-sheet">
+                    <ion-select-option value="f">26cm<span class="select-price">(5,60 €)</span> </ion-select-option>
+                    <ion-select-option value="g">32cm<span class="select-price">(8,10 €)</span> </ion-select-option>
+                    <ion-select-option value="h">38cm<span class="select-price">(13,10 €)</span> </ion-select-option>
+                  </ion-select>
+                </ion-item>
+
+
+
+            <ion-list-header>
+              <ion-label>EXTRAS</ion-label>
+            </ion-list-header>            
+            <ion-item *ngFor="let entry of form">
+              <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
+              <ion-label>{{entry.val}} <span class="checkbox-price">{{entry.price}}</span> </ion-label>
+            </ion-item>
+
+            <!-- <ion-radio-group>
+                <ion-list-header>
+                  <ion-label>Name</ion-label>
+                </ion-list-header>
+            
+                <ion-item>
+                  <ion-label>Biff</ion-label>
+                  <ion-radio slot="start" value="biff" checked></ion-radio>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-label>Griff</ion-label>
+                  <ion-radio slot="start" value="griff"></ion-radio>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-label>Buford</ion-label>
+                  <ion-radio slot="start" value="buford"></ion-radio>
+                </ion-item>
+              </ion-radio-group> -->
+          </ion-list>          
+          
+          
+          
+          <ion-list>
+            <ion-button expand="full" (click)="addToCart(menu)">Add to Cart</ion-button>
+          </ion-list>
+
+        </div>
+
+      </div>
+    </ion-item>
+                    
+  </ion-list>
+
+</ion-content>

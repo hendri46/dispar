@@ -1,0 +1,60 @@
+<ion-header class="primary-header light-header">
+  <ion-toolbar color="light">
+    <ion-title slot="start" color="success">Add Credit Card</ion-title>
+    <ion-buttons class="header-icons" slot="end" color="success">
+    <ion-button (click)="closeModal()"><i class="far fa-times"></i></ion-button>
+    </ion-buttons>      
+  </ion-toolbar>
+</ion-header>  
+
+
+<ion-content class="card-page" padding>
+
+  <div class="add-card-content">
+      <ion-item class="full-input">
+        <i item-start class="far fa-user"></i>
+          <ion-input type="num" placeholder="Name / Surname"></ion-input>
+      </ion-item>
+      <ion-item class="full-input">
+        <i item-start class="fas fa-credit-card"></i>
+          <ion-input type="num" placeholder="Card Number" [brmasker]="{mask:'0000 0000 0000 0000', len:19, type:'num'}"></ion-input>
+      </ion-item>          
+
+        <ion-row>
+          <ion-col col-7>
+              <ion-item class="input-group">
+                  <ion-label position="floating">DATE</ion-label>
+
+                  <ion-row class="card-date">
+                      <ion-col col-6>
+                        <ion-input type="num"  placeholder="MM" [brmasker]="{mask:'00', len:2, type:'num'}"></ion-input>
+                      </ion-col>
+                      <ion-col col-6>
+                        <ion-input type="num" placeholder="YY" [brmasker]="{mask:'00', len:2, type:'num'}"></ion-input>
+                      </ion-col>                      
+                  </ion-row>
+
+                </ion-item>                  
+          </ion-col>
+          <ion-col col-5>
+              <ion-item>
+                  <ion-label position="floating">CVC</ion-label>
+                  <ion-input type="text" placeholder="XXX" [brmasker]="{mask:'000', len:3, type:'num'}"></ion-input>
+                </ion-item>                  
+          </ion-col>
+        </ion-row>
+
+      <div class="privacy-policy">
+        <ion-checkbox slot="start"></ion-checkbox>
+        Save my credit card information
+      </div>
+
+      <ion-row class="save-action" padding>
+        <ion-button shape="round" expand="block" (click)="closeModal()">SAVE CARD</ion-button>
+      </ion-row>   
+
+  </div>
+
+
+</ion-content>
+

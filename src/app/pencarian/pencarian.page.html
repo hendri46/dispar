@@ -1,0 +1,125 @@
+<ion-header class="primary-header browse-page">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-input placeholder="Pencarian"  autofocus="true" (ionChange)="getPencarian($event)" style="text-align: left; color: black;"></ion-input>
+    <ion-icon name="search" color="dark" slot="end" style="padding-left: 0px; padding-right: 5px;"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+  <div class="content_div support-page">
+  <div class="kategori_per_produk " *ngIf="objekWisata && objekWisata != ''">
+    <div class="hello_lbl">
+      <ion-label class="">Objek Wisata</ion-label>
+    </div>
+      <div class="favorites-zone reviews-zone">
+        <ion-list class="favorites">
+            <ion-item-sliding *ngFor="let item of objekWisata">
+                <ion-item lines="none" [routerLink]="'/detail-wisata/'+ item?.id" routerDirection="forward">
+                  <div class="restaurant-image">
+                    <img src="{{path?.wisata}}{{item.gambar_header}}">
+                  </div>                  
+                  <ion-label>
+                    <h2 class="ion-text-wrap">{{ item.nama_kabupaten }} - {{ item.nama }}</h2>
+                    <ion-badge *ngIf="item?.jenis == 1" color="tertiary">Alam</ion-badge>
+                  <ion-badge *ngIf="item?.jenis == 2" color="success">Buatan</ion-badge>
+                  <ion-badge *ngIf="item?.jenis == 3" color="warning">Budaya</ion-badge>
+                  </ion-label>
+                </ion-item>
+              </ion-item-sliding>
+          </ion-list>  
+      </div>
+  </div>
+
+  <div class="kategori_per_produk " *ngIf="event && event != ''">
+    <div class="hello_lbl">
+      <ion-label class="">Event</ion-label>
+    </div>
+      <div class="favorites-zone reviews-zone">
+        <ion-list class="favorites">
+            <ion-item-sliding *ngFor="let item of event">
+              <ion-item lines="none" [routerLink]="'/detail-event/'+ item?.id" routerDirection="forward">
+                <div class="restaurant-image">
+                  <img src="{{path?.event}}{{item.gambar_header}}">
+                </div>                  
+                <ion-label>
+                  <h2 class="ion-text-wrap">{{ item.nama_kabupaten }} - {{ item.nama }}</h2>
+                    <ion-badge color="medium">{{ item.tanggal_mulai }} s/d {{ item.tanggal_selesai }}</ion-badge>
+                </ion-label>
+              </ion-item>
+              </ion-item-sliding>
+          </ion-list>  
+      </div>
+  </div>
+
+  <div class="kategori_per_produk " *ngIf="hotel && hotel != ''">
+    <div class="hello_lbl">
+      <ion-label class="">Hotel</ion-label>
+    </div>
+      <div class="favorites-zone reviews-zone">
+        <ion-list class="favorites">
+            <ion-item-sliding *ngFor="let item of hotel">
+                <ion-item lines="none" [routerLink]="'/detail-hotel/'+ item?.id" routerDirection="forward">
+                  <div class="restaurant-image">
+                    <img src="{{path?.hotel}}{{item.gambar}}">
+                  </div>                  
+                  <ion-label>
+                    <h2 class="ion-text-wrap">{{ item.nama_kabupaten }} - {{ item.nama }}</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-item-sliding>
+          </ion-list>  
+      </div>
+  </div>
+
+  <div class="kategori_per_produk " *ngIf="itemsTempatIbadah && itemsTempatIbadah != ''">
+    <div class="hello_lbl">
+      <ion-label class="">Tempat Ibadah</ion-label>
+    </div>
+      <div class="favorites-zone reviews-zone">
+        <ion-list class="favorites">
+            <ion-item-sliding *ngFor="let item of itemsTempatIbadah">
+                <ion-item lines="none" [routerLink]="'/detail-tempat-ibadah/'+ item?.id" routerDirection="forward">
+                  <div class="restaurant-image">
+                    <img src="{{path?.tempatibadah}}{{item.gambar}}">
+                  </div>                  
+                  <ion-label>
+                    <h2 class="ion-text-wrap">{{ item.nama_kabupaten }} - {{ item.nama }}</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-item-sliding>
+          </ion-list>  
+      </div>
+  </div>
+
+  <div class="kategori_per_produk " *ngIf="resto && resto != '' ">
+    <div class="hello_lbl">
+      <ion-label class="">Restoran</ion-label>
+    </div>
+      <div class="favorites-zone reviews-zone">
+        <ion-list class="favorites">
+            <ion-item-sliding *ngFor="let item of resto">
+                <ion-item lines="none" [routerLink]="'/detail-restoran/'+ item?.id" routerDirection="forward">
+                  <div class="restaurant-image">
+                    <img src="{{path?.restoran}}{{item.gambar}}">
+                  </div>                  
+                  <ion-label>
+                    <h2 class="ion-text-wrap">{{ item.nama_kabupaten }} - {{ item.nama }}</h2>
+                  </ion-label>
+                </ion-item>
+              </ion-item-sliding>
+          </ion-list>  
+      </div>
+  </div>
+
+  
+
+  
+
+</div>
+</div>
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header class="primary-header browse-page">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-input placeholder="Pencarian"  autofocus="true" (ionChange)="getPencarian($event)" style="text-align: left; color: black;"></ion-input>
+    <ion-icon name="search" color="dark" slot="end" style="padding-left: 0px; padding-right: 5px;"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="tarik untuk segarkan"
+        refreshingSpinner="circles"
+        refreshingText="Segarkan..."></ion-refresher-content>
+      </ion-refresher>
+      
+
+    <div class="favorites-zone reviews-zone">
+      <ion-list class="favorites">
+          <ion-item-sliding *ngFor="let item of itemsSadar">
+              <ion-item lines="none" [routerLink]="'/detail-desa/'+ item?.id" routerDirection="forward">
+                <div class="restaurant-image">
+                  <img src="{{path?.desa}}{{item.gambar_header}}">
+                </div>                  
+                <ion-label>
+                  <h2 class="ion-text-wrap">{{ item.nama_kabupaten }} - {{ item.nama }}</h2>
+                </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+        </ion-list>  
+    </div>
+
+      <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+          <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="Lihat lebih banyak...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+</ion-content>

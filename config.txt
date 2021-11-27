@@ -1,0 +1,6 @@
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore jemari.keystore jemari v2.apk jemari
+
+zipalign -v 4 jemariv2.apk jemariv2publish.apk
+
+password
+jemari

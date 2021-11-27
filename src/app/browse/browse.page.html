@@ -1,0 +1,96 @@
+<ion-header class="primary-header browse-page">
+  <ion-toolbar>
+    <ion-title slot="start">Browse</ion-title>
+    <ion-buttons >
+      <ion-button  fill="clear" color="light" (click)="presentModal()">
+        Filter
+      </ion-button>
+    </ion-buttons>    
+  </ion-toolbar>
+  <!-- <ion-searchbar placeholder="Search Restaurant"></ion-searchbar> -->
+</ion-header>
+
+
+<ion-content>
+
+
+
+  <div class="check-bars">
+    <ion-label color="color26" class="check-delivery">Delivery</ion-label>
+    <ion-toggle [(ngModel)]="toggleValue" checked="true"></ion-toggle>
+    <ion-label color="color26" class="check-pickup">Pickup</ion-label>
+  </div>
+
+  <div class="address-zone">
+    <ion-input class="map-address" placeholder="21 Greens Road RD 2 Ruawai 0592" autofocus="false"></ion-input>
+    <ion-button routerLink="/addresslist"><i class="far fa-edit"></i></ion-button>
+    <ion-input class="search-icon" [(ngModel)]="searchText" placeholder="Restaurant Search"></ion-input>
+
+  </div>
+
+
+
+  <div class="meal-types">
+    <ul>
+      <li *ngFor="let meal of meals" (click)="clickEvent()">
+        <a><img src="{{meal.meals_icon}}" alt=""></a>
+        <span>{{meal.meals_name}}</span>
+      </li>
+    </ul>
+  </div>
+
+    <div class="sort-list">
+      <ion-item>
+        <ion-select [interfaceOptions]="customActionSheetOptions" placeholder="Select One" cancelText="CANCEL" interface="action-sheet">
+          <ion-select-option selected="true">Sort by Order Fee</ion-select-option>
+          <ion-select-option>Sort by Distance</ion-select-option>
+          <ion-select-option>Sort by Alphabetic</ion-select-option>
+          <ion-select-option>Sort by Rating</ion-select-option>
+          <ion-select-option>Sort by Service Time</ion-select-option>
+        </ion-select>
+      </ion-item>
+  </div>      
+
+  <div  class="populars">
+
+      <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="Pull to refresh"
+            refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+          </ion-refresher-content>
+        </ion-refresher> -->
+        
+      <ion-card class="list-restaurants" *ngFor="let restaurant of restaurants | list: searchText" routerLink="/restaurantpage1">
+
+
+        
+        <div class="menu-image">
+          <img *ngFor="let imgs of restaurant.images" [src]="imgs">
+        </div>
+        <div class="menu-info">
+          <div class="menu-name">
+            {{ restaurant.name }}
+          </div>
+          <div class="restaurant-address">
+            {{ restaurant.address }}
+          </div>            
+        </div>        
+        <ion-row>
+          <ion-col size="6" class="restaurant-reviews">
+            {{ restaurant.rating }}
+            <i class="fas fa-star"></i> <span class="review-counts">
+              {{ restaurant.reviews}}
+            </span>
+          </ion-col>
+          <ion-col size="6" class="open-time">
+            {{ restaurant.opentime}}
+          </ion-col>
+        </ion-row>
+        
+      </ion-card> 
+
+  </div>  
+
+</ion-content>

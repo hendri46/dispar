@@ -1,0 +1,151 @@
+
+<ion-header>
+    <ion-toolbar color="light">
+      <ion-buttons slot="start">
+        <ion-back-button color="success"></ion-back-button>
+      </ion-buttons>
+      <ion-title color="success"></ion-title>     
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="standard-page">
+      <h1 class="big-title">Conrad Chicago Restaurant</h1>
+      <ion-row class="restaurant-info">
+        <ion-col size="8" class="restaurant-address">
+            <i class="fas fa-map-marker-alt"></i>  963 Madyson Suite 679
+        </ion-col>
+        <ion-col size="4" class="restaurant-reviews">
+          4.6 <i class="fas fa-star"></i> <span class="review-counts">(312)</span>
+        </ion-col>
+      </ion-row>
+
+
+
+      
+      <div class="check-bars">
+        <ion-label color="color26" class="check-delivery">Delivery</ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+        <ion-label color="color26" class="check-pickup">Pickup</ion-label>
+      </div>
+
+      <ion-item class="restaurant-actions" lines="none">
+        <ion-buttons class="actions-buttons" slot="start">
+          <ion-button (click)="openShareaction()"><i class="far fa-share-square"></i></ion-button>
+          <ion-button (click)="presentToast()"><i class="far fa-heart"></i></ion-button>
+          <ion-button (click)="presentModal()"><i class="fal fa-map-marker-alt"></i></ion-button>
+        </ion-buttons>
+        <ion-button class="contact-button" slot="end" shape="round" fill="outline" routerLink="/restaurantinfo">
+          <i class="fas fa-info-circle"></i>
+          Contact
+        </ion-button>
+      </ion-item>
+
+
+      <div class="trends">
+          <h1>FEATURED ITEMS</h1>
+          <ion-slides pager="false" [options]="slideOpts">
+            <ion-slide *ngFor="let restaurant of restaurants" routerLink="/restaurantpage1">
+              <div class="menu-image">
+                <img src="{{restaurant.menu_image}}" alt="">
+                <div class="menu-info">
+                  <div class="menu-name">{{ restaurant.menu_name }}</div>
+                  <div class="restaurant-name">{{ restaurant.name }}</div>            
+                </div>
+              </div>
+              <ion-row>
+                <ion-col size="6" class="restaurant-reviews">
+                  {{ restaurant.rating }} <i class="fas fa-star"></i> <span class="review-counts">( {{restaurant.reviews }})</span>
+                </ion-col>
+                <ion-col size="6" class="menu-price">
+                  {{ restaurant.menu_price }}
+                </ion-col>
+              </ion-row>
+              
+            </ion-slide>
+          </ion-slides>
+        </div>
+
+
+        <div class="restaurant-menu-list">
+            <h1>MENU</h1>
+            <ion-list class="menus">
+              <ion-item *ngFor="let type of categories" routerLink="{{type.routerLink}}">
+                <ion-label>{{type.name}}</ion-label>
+                <div class="menu-amount" slot="end">{{type.count}}</div>
+              </ion-item>
+      
+                                                                                                                            
+              
+            </ion-list>          
+        </div>
+        
+
+        <div class="reviews-zone">
+          <h1>REVIEWS</h1>
+          <ion-list padding-horizontal class="reviews">
+              <ion-item lines="none">
+                <ion-avatar slot="start">
+                  <img src="../../assets/images/profile.png">
+                </ion-avatar>
+                <div class="review-stars">
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <ion-label>
+                  <h2>John Doe</h2>
+                  <h3>2 hours ago</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text.</p>
+                </ion-label>
+              </ion-item>                                                                                                              
+
+              <ion-item lines="none">
+                <ion-avatar slot="start">
+                  <img src="../../assets/images/profile.png">
+                </ion-avatar>
+                <div class="review-stars">
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star checking"></i>
+                </div>
+                <ion-label>
+                  <h2>Vincent King</h2>
+                  <h3>2 hours ago</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text.</p>
+                </ion-label>
+              </ion-item>  
+
+              <ion-item lines="none">
+                <ion-avatar slot="start">
+                  <img src="../../assets/images/profile.png">
+                </ion-avatar>
+                <div class="review-stars">
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star checking"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <ion-label>
+                  <h2>Alex Benefis</h2>
+                  <h3>2 hours ago</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text.</p>
+                </ion-label>
+              </ion-item>                                                                                                                            
+              
+            </ion-list>  
+            
+            <div class="reply-zone">
+              <ion-button class="reply-review" shape="round" fill="outline">Write a review</ion-button>
+            </div>            
+        </div>
+        
+
+
+
+
+    </ion-content>

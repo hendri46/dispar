@@ -1,0 +1,43 @@
+<ion-content class="profile-page1">
+  <div class="profile-page-content">
+    <!-- <ion-button fill="clear" class="profile-edit-button" (click)="openProfilePage()">Edit</ion-button> -->
+    <div class="profile-content">
+      <div class="profile-header">
+        <img src="../../assets/images/profile.png" alt="">
+        <h3>JEMARI</h3>
+        <p style="color: black;">Jendela Informasi Pariwisata Riau</p>
+      </div>
+    <ion-list class="user-menu">
+      <ion-item (click)="openTentangKamiPage()">
+        <i slot="start" class="fal fa-user"></i>
+        <ion-label>Tentang Kami</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>
+  
+       
+      <ion-item (click)="openKontakPage()">
+        <i slot="start" class="fal fa-address-book"></i>
+        <ion-label>Kontak</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>
+
+      <ion-item (click)="openPenggunaanPage()">
+        <i slot="start" class="fal fa-exclamation-triangle"></i>
+        <ion-label>Ketentuan penggunaan</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>
+  
+      <ion-item (click)="openRahasiaPage()">
+        <i slot="start" class="fal fa-lock"></i>
+        <ion-label>Kebijakan kerahasiaan</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>      
+  
+    </ion-list>
+  
+
+  </div>
+  
+  </div>
+
+</ion-content>

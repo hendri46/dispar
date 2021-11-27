@@ -1,0 +1,23 @@
+<ion-header class="primary-header light-header">
+  <ion-toolbar color="light">
+    <ion-title slot="start" color="success">Kebijakan</ion-title>
+    <ion-buttons class="header-icons" slot="end" color="success">
+      <ion-button (click)="closeModal()"><i class="far fa-times"></i></ion-button>
+    </ion-buttons>      
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="profile-page1">
+  <div class="profile-page-content">
+    <div class="profile-content">
+      <div class="profile-header">
+        <img src="../../assets/images/profile.png" alt="">
+        <div padding-horizontal class="menus ion-text-justify" style="font-size: 12px; color: white;" [innerHTML]="detail?.kebijakan">
+        </div>  
+      </div>     
+  </div>
+  
+  </div>
+
+</ion-content>

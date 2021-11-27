@@ -1,0 +1,114 @@
+<ion-header class="primary-header light-header">
+    <ion-toolbar color="light">
+      <ion-title slot="start" color="success">Support</ion-title>
+      <ion-buttons class="header-icons" slot="end" color="success">
+        <ion-button (click)="closeModal()"><i class="far fa-times"></i></ion-button>
+      </ion-buttons>      
+    </ion-toolbar>
+  </ion-header>  
+
+<ion-content class="support-page">
+
+    <ion-searchbar showCancelButton="always"></ion-searchbar>
+
+  <div class="topics">
+    <h3>Select to Topic</h3>
+    <ion-row>
+      <ion-col col-4>
+        <i class="fas fa-pennant"></i>
+        <p>Getting Started</p>
+      </ion-col>
+
+      <ion-col col-4>
+        <i class="fas fa-exchange-alt"></i>
+        <p>Order issues</p>
+      </ion-col>
+
+
+
+      <ion-col col-4>
+          <i class="far fa-money-bill-alt"></i>
+        <p>Payment</p>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+
+      <ion-col col-4>
+          <i class="far fa-user"></i>
+        <p>Profile</p>
+      </ion-col>
+
+      <ion-col col-4>
+          <i class="far fa-certificate"></i>
+        <p>Explore Foodmania</p>
+      </ion-col>
+
+      <ion-col col-4>
+          <i class="fal fa-cloud-meatball"></i>
+        <p>More</p>
+      </ion-col>
+
+    </ion-row>
+  </div>
+
+
+
+
+
+
+
+    <div class="accordion vertical">
+        <ul>
+            <li>
+                <input type="radio" id="radio-1" name="radio-accordion" [checked]="true" />
+                <label for="radio-1">#What are the frequently asked questions?</label> 
+                <div class="content">
+                  <p>
+                    In terms of FAQ pages, "the more the merrier" is actually a fallacy. Too much text can end up being too confusing, causing readers to have to search for the answer they need. Rather than writing long and eloquent paragraphs, it's best to be straightforward and brief when providing answers.
+                  </p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="radio-2" name="radio-accordion" />
+                <label for="radio-2">#What do you know about the company?</label>
+                <div class="content">
+                  <p>
+                    It's important that every FAQ page you have is always accurate. As your organization faces product launches and updates, your FAQ pages should reflect these changes as well. This means your team needs to consistently review each page and revise it after launching new features.
+                  </p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="radio-3" name="radio-accordion" />
+                <label for="radio-3">#Include a search bar.</label>
+                <div class="content">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="radio-4" name="radio-accordion" />
+                <label for="radio-4">#Organize questions by category.</label>
+                <div class="content">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </li>                                     
+            <li>
+              <input type="radio" id="radio-5" name="radio-accordion" />
+              <label for="radio-5">#Link top questions.</label>
+              <div class="content">
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+          </li>                    
+        </ul>
+    </div>
+
+    <div class="copright-zone">
+      <ul class="socials-links">
+        <li><i class="fab fa-twitter-square"></i></li>
+        <li><i class="fab fa-facebook-square"></i></li>
+        <li><i class="fab fa-instagram"></i></li>
+      </ul>
+      <p class="copright-content">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown prambled it to make a type specimen book.</p>
+      <p class="copright-text">© Copyright Foodmania V 1.0.1</p>
+    </div>
+</ion-content>

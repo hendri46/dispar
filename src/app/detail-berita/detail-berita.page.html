@@ -1,0 +1,76 @@
+<ion-content class="profile-page standard-page" [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Segarkan..."></ion-refresher-content>
+  </ion-refresher>
+  <ion-list class="menu-list">
+    <div class="menu-header" >
+        <div class="menu-cat-img">
+          <div class="menu-image">
+            <ion-img style="height:200px;" *ngIf="detail?.thumbnail != null" src="{{path?.berita}}{{detail?.thumbnail}}" alt="" onError="this.onerror=null; this.src='/assets/icon/objek-hotel.png';"></ion-img>
+          
+          </div>
+            <span class="notify-badge"><ion-back-button defaultHref="/"></ion-back-button></span>
+        </div>
+        <h1 class="big-title">{{ detail?.title }}</h1>
+        <!-- <h1 class="medium-title">Kabupaten / Kota {{ detail?.nama_kabupaten }}</h1> -->
+        <ion-row class="restaurant-info">
+        </ion-row>
+    </div>
+
+    <!-- <div class="info-list">
+      <h1>Data Berita</h1>
+      <ion-list padding-horizontal class="menus">
+        <ion-item>
+          <ion-label>Judul Berita</ion-label>
+          <ion-label class="ion-text-wrap" slot="end">{{ detail?.title }}</ion-label>
+        </ion-item> 
+        <ion-item>
+          <ion-label>Kategori Berita</ion-label>
+          <ion-label class="ion-text-wrap" slot="end">{{ detail?.nama_kategori }}</ion-label>
+        </ion-item> 
+        <ion-item *ngIf="detail?.nama_objek_wisata != null">
+          <ion-label>Objek Wisata</ion-label>
+          <ion-label class="ion-text-wrap" slot="end">{{ detail?.nama_objek_wisata }}</ion-label>
+        </ion-item> 
+      </ion-list>          
+    </div> -->
+
+    <div class="opened-time">
+      <!-- <h1>Deskripsi</h1> -->
+      <ion-list padding-horizontal class="menus ion-text-justify" style="font-size: 12px;" [innerHTML]="detail?.isi">
+      </ion-list>         
+    </div>  
+    <ion-chip>
+      <ion-icon *ngIf="detail?.nama_kabupaten != null" name="compass" color="primary"></ion-icon>
+      <ion-label>{{ detail?.nama_kabupaten }}</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-icon *ngIf="detail?.nama_kategori != null" name="pricetag" color="primary"></ion-icon>
+      <ion-label>{{ detail?.nama_kategori }}</ion-label>
+    </ion-chip>
+
+  </ion-list>
+
+  <div class="favorites-zone reviews-zone">
+    <h1>Berita Lainnya</h1>
+
+    <ion-list class="favorites">
+        <ion-item-sliding *ngFor="let item of terdekat">
+            <ion-item lines="none" [routerLink]="'/detail-berita/'+ item?.id" routerDirection="forward">
+              <div class="restaurant-image">
+                <img src="{{path?.berita}}{{item.thumbnail}}">
+              </div>                  
+              <ion-label>
+                <h2 class="ion-text-wrap">{{ item.title }}</h2>
+              </ion-label>
+            </ion-item>
+          </ion-item-sliding>
+      </ion-list>  
+  </div>
+</ion-content>
+
+

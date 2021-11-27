@@ -1,0 +1,111 @@
+
+<ion-header>
+    <ion-toolbar color="light">
+      <ion-buttons slot="start">
+        <ion-back-button color="success"></ion-back-button>
+      </ion-buttons>
+      <ion-title color="success"></ion-title>
+      <ion-buttons class="header-icons" slot="end" color="success">
+          <i class="far fa-heart"></i>
+          <i class="fas fa-info-circle"></i>
+      </ion-buttons>      
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="standard-page">
+      <h1 class="big-title">Conrad Chicago Restaurant</h1>
+      <ion-row class="restaurant-info">
+        <ion-col size="8" class="restaurant-address">
+            <i class="fas fa-map-marker-alt"></i>  963 Madyson Suite 679
+        </ion-col>
+        <ion-col size="4" class="restaurant-reviews">
+          4.6 <i class="fas fa-star"></i> <span class="review-counts">(312)</span>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-slides class="restaurant-info-slider" pager="true" [options]="slideOpts">
+        <ion-slide>
+          <img src="https://www.oniva.com.tr/foodmania/images/restaurants/r10.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+          <img src="https://www.oniva.com.tr/foodmania/images/restaurants/r1.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+          <img src="https://www.oniva.com.tr/foodmania/images/restaurants/r4.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+          <img src="https://www.oniva.com.tr/foodmania/images/restaurants/r3.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+          <img src="https://www.oniva.com.tr/foodmania/images/restaurants/r14.jpg" alt="">
+        </ion-slide>
+      </ion-slides>
+      
+
+
+        <div class="info-list">
+            <h1>Information</h1>
+            <ion-list padding-horizontal class="menus">
+              <ion-item href="tel:+118005555555">
+                <ion-label>Phone</ion-label>
+                <div class="menu-amount" slot="end">+1 1800 555 5555</div>
+              </ion-item>
+     
+              <ion-item>
+                <ion-label>Address</ion-label>
+                <div class="menu-amount" slot="end">963 Madyson Suite 679</div>
+              </ion-item>       
+
+              <ion-item>
+                <ion-label>Kitchen</ion-label>
+                <div class="menu-amount" slot="end">Salad, Grilled, Fish</div>
+              </ion-item>                
+              
+            </ion-list>          
+        </div>
+        
+
+        <div class="opened-time">
+          <h1>Opening Hours</h1>
+          <ion-list padding-horizontal class="menus">
+            <ion-item>
+              <ion-label>Sunday</ion-label>
+              <div class="menu-amount" slot="end">09:00 / 21:00</div>
+            </ion-item>
+            <ion-item>
+              <ion-label>Monday</ion-label>
+              <div class="menu-amount" slot="end">09:00 / 21:00</div>
+            </ion-item>  
+            <ion-item>
+              <ion-label>Tuesday</ion-label>
+              <div class="menu-amount" slot="end">09:00 / 21:00</div>
+            </ion-item>
+            <ion-item>
+              <ion-label>Wednesday</ion-label>
+              <div class="menu-amount" slot="end">09:00 / 21:00</div>
+            </ion-item>
+            <ion-item>
+              <ion-label>Thursday</ion-label>
+              <div class="menu-amount" slot="end">09:00 / 21:00</div>
+            </ion-item>
+            <ion-item>
+              <ion-label>Friday</ion-label>
+              <div class="menu-amount" slot="end">09:00 / 21:00</div>
+            </ion-item>
+            <ion-item>
+              <ion-label>Saturday</ion-label>
+              <div class="menu-amount" slot="end">09:00 / 21:00</div>
+            </ion-item>                                                                      
+            
+          </ion-list>          
+      </div>        
+        
+      <div class="restaurant-map">
+        <h1>Location</h1>
+        <div #mapElement class="map"></div>        
+      </div>
+
+
+
+    </ion-content>

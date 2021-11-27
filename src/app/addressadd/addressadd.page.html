@@ -1,0 +1,47 @@
+<ion-header class="full-header browse-page">
+  <ion-toolbar color="success">
+    <ion-title slot="start">Add Address</ion-title>
+    <ion-buttons slot="end">
+        <ion-button  fill="clear" color="light" (click)="goBack()">
+        <i class="fal fa-times-circle close-icon"></i>          
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="add-address-page">
+  
+
+<ion-item>
+  <ion-label position="floating">Address Name</ion-label>
+  <ion-input placeholder="My Address"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">PostalCode</ion-label>
+  <ion-input placeholder="My Postal Code"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">State</ion-label>
+  <ion-input placeholder="My in State"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Street</ion-label>
+  <ion-input placeholder="My in Street"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Building No</ion-label>
+  <ion-input placeholder="My Building No"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Notes:</ion-label>
+  <ion-textarea rows="4" placeholder="Enter any notes here..."></ion-textarea>
+</ion-item>
+
+<ion-button (click)="goBack()" shape="round" color="success">Save My Address</ion-button>
+
+</ion-content>

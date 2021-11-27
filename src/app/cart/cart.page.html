@@ -1,0 +1,76 @@
+<ion-header class="primary-header light-header">
+  <ion-toolbar color="light">
+    <ion-title slot="start" color="success">Cart Page</ion-title>
+    <ion-buttons class="header-icons" slot="end" color="success">
+      <ion-button (click)="closeModal()"><i class="far fa-times"></i></ion-button>
+    </ion-buttons>      
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="vat-list-container">
+
+    <div class="vat-items">
+      <div class="header">
+        <h3>Palak Paneer
+            <span class="vat-price"> <span class="ex-vat-price">$16.90</span>$12.90</span>
+          </h3>
+        <ul>
+          <li>Coconut <span class="sub-vat-price"><span class="ex-vat-price">$2.90</span> $0.90</span></li>
+          <li>Mohakhali DOHS <span class="sub-vat-price">$4.90</span></li>
+        </ul>
+        <div class="amount">
+            <i class="far fa-minus-circle" name="remove-circle" (click)="decrement(1)"></i>
+            {{currentNumber1}}
+            <i class="far fa-plus-circle" name="add-circle" (click)="increment(1)"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="vat-items">
+      <div class="header">
+        <h3>Palak Paneer <span class="vat-price">$12.90</span></h3>
+        <div class="amount">
+            <i class="far fa-minus-circle" name="remove-circle" (click)="decrement(2)"></i>
+            {{currentNumber2}}
+            <i class="far fa-plus-circle" name="add-circle" (click)="increment(2)"></i>
+        </div>        
+      </div>
+    </div>    
+
+    <div class="vat-items">
+      <div class="header">
+        <h3>Palak Paneer <span class="vat-price"> <span class="ex-vat-price">$18.90</span>$14.90</span></h3>
+        <ul>
+          <li>Coconut <span class="sub-vat-price"> $1.90</span></li>
+        </ul>
+        <div class="amount">
+            <i class="far fa-minus-circle" name="remove-circle" (click)="decrement(3)"></i>
+            {{currentNumber3}}
+            <i class="far fa-plus-circle" name="add-circle" (click)="increment(3)"></i>
+        </div>        
+      </div>
+    </div>
+
+
+
+    <div class="calc">
+        <ul>
+          <li>Sub Total <span class="sub-vat-price"> $44.90</span></li>
+          <li class="feeds">Delivery <span class="sub-vat-price"> $4.00</span></li>
+          <li class="total">Total <span class="sub-vat-price"> $48.90</span></li>
+        </ul>
+    </div>
+
+    <ion-row>
+      <ion-col clo-4>
+        <ion-button expand="full" shape="round" color="medium">Clear</ion-button>
+      </ion-col>
+      <ion-col col-8>
+       <ion-button expand="full" shape="round" color="success" (click)="openCheckoutPage()"><i class="fal fa-cash-register button-left-icon"></i> Go Checkout</ion-button>
+      </ion-col>          
+    </ion-row>
+
+  </div>
+
+</ion-content>

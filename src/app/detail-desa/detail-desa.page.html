@@ -1,0 +1,78 @@
+<ion-content class="profile-page standard-page" [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Segarkan..."></ion-refresher-content>
+  </ion-refresher>
+  <ion-list class="menu-list">
+    <div class="menu-header" >
+        <div class="menu-cat-img">
+          <div class="menu-image">
+            <ion-thumbnail style="height: 200px; width: 100%;">
+              <img *ngIf="detail?.gambar_header" src="{{ path['desa'] }}{{detail?.gambar_header}}" alt="">
+            </ion-thumbnail> 
+          </div>
+            <span class="notify-badge"><ion-back-button defaultHref="/"></ion-back-button></span>
+        </div>
+
+        <h1 class="big-title">{{ detail?.nama }}</h1>
+        <div>
+        <ion-chip>
+          <ion-icon *ngIf="detail?.nama_kabupaten != null" name="compass" color="primary"></ion-icon>
+          <ion-label>{{ detail?.nama_kabupaten }}</ion-label>
+        </ion-chip>
+      </div>
+    </div>
+
+    <div class="info-list">
+      <h1>Data Desa Wisata</h1>
+      <ion-list padding-horizontal class="menus">
+        <ion-item *ngIf="detail?.nama != null">
+            <ion-label>Nama : {{ detail?.nama }}</ion-label>
+        </ion-item>
+        <ion-item *ngIf="detail?.alamat != null">
+          <ion-label>Alamat : {{ detail?.alamat }}</ion-label>
+        </ion-item>
+        <ion-item *ngIf="detail?.potensi_wisata != null">
+          <ion-label>Potensi Wisata : {{ detail?.potensi_wisata }}</ion-label>
+        </ion-item>
+        <ion-item *ngIf="detail?.kontak != null" href="tel:{{ detail?.kontak }}">
+          <ion-label>Kontak : {{ detail?.kontak }}</ion-label>
+        </ion-item>
+      </ion-list>          
+    </div>
+
+
+    <div class="info-list" *ngIf="sadarWisata">
+      <h1>Sadar Wisata</h1>
+
+      <ion-list style="margin-bottom: 10px;" *ngFor="let item of sadarWisata" padding-horizontal class="menus">
+        <ion-chip slot="start">
+          <ion-icon *ngIf="item?.nama_sadar_wisata != null" name="remove-circle" color="primary"></ion-icon>
+          <ion-label>Nama :{{ item?.nama_sadar_wisata }}</ion-label>
+        </ion-chip>
+      </ion-list>          
+    </div>
+  </ion-list>
+  
+  <div class="favorites-zone reviews-zone">
+    <h1>Desa Wisata Lainnya</h1>
+    <ion-list class="favorites">
+        <ion-item-sliding *ngFor="let item of terdekat">
+            <ion-item lines="none" [routerLink]="'/detail-desa/'+ item?.id" routerDirection="forward">
+              <div class="restaurant-image">
+                <img src="{{path?.desa}}{{item.gambar_header}}">
+              </div>                  
+              <ion-label>
+                <h2 class="ion-text-wrap">{{ item.nama_kabupaten }} - {{ item.nama }}</h2>
+              </ion-label>
+            </ion-item>
+          </ion-item-sliding>
+      </ion-list>  
+  </div>
+
+</ion-content>
+
+

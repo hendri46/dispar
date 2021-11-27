@@ -1,0 +1,581 @@
+[33mcommit f58a9fbe6d1e20297d2f955138542ab2db0d716f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Thu Feb 11 10:15:10 2021 +0700
+
+    try
+
+[33mcommit 59f2a35edfd11418970d476b27653986e8ca55d1[m
+Merge: 586a597 c32991c
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Thu Feb 11 10:01:54 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit c32991c3674e459d9d22ff4c61efe3ec24b10b0c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 2de5c4f 5f874a9
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Thu Feb 11 09:55:32 2021 +0700
+
+    try
+
+[33mcommit 2de5c4f28cb77189b5d7e07b133fbfdb66bebd38[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Thu Feb 11 09:47:40 2021 +0700
+
+    try
+
+[33mcommit 586a59742cd72892d3960ffdc26a993e2a66ea2b[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Thu Feb 11 09:43:39 2021 +0700
+
+    Bismillah
+
+[33mcommit 0797218b1cc4de7f1ef82c28e9be5b2558ad7377[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Thu Feb 11 09:40:13 2021 +0700
+
+    a
+
+[33mcommit 51bfddb65031951111c0834d7f1969202fa077dd[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Feb 10 23:21:49 2021 +0700
+
+    oke menu full
+
+[33mcommit 0bb59c36f68c5dc0315bcbad76150511ae447daf[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Feb 10 12:22:32 2021 +0700
+
+    fix menu
+
+[33mcommit a072b793f82ef90a8623f7a9ab560c09f684ae2b[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Feb 10 01:52:37 2021 +0700
+
+    masih sampe ekraf
+
+[33mcommit 373a2ecf7bd53624f6114e93ac6f0a3ba822226f[m
+Merge: 3db4430 5f874a9
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 9 21:08:19 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit 5f874a98f599bfc0ef00ae25d6f19b341e66f5af[m
+Merge: 01e42e3 5b72f08
+Author: aliakbarnst92 <aliakbar9264@gmail.com>
+Date:   Tue Feb 9 21:05:21 2021 +0700
+
+    a
+
+[33mcommit 01e42e36bd6d8574e3852866837aa57bb5048829[m
+Author: aliakbarnst92 <aliakbar9264@gmail.com>
+Date:   Tue Feb 9 21:04:02 2021 +0700
+
+    update
+
+[33mcommit 5b72f08ad6e72fe031c124d4b54d8207e49f0c94[m
+Merge: 28a44b9 d8a31d7
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 9 04:32:40 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit 28a44b93f3d4ee97dd03826e0413804d860555d4[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 9 04:32:33 2021 +0700
+
+    style home
+
+[33mcommit 3db4430a853771444d562a38e741eeedab1ba1e5[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Feb 3 12:32:13 2021 +0700
+
+    perbaiki telpon1
+
+[33mcommit d8befc5f0e3b4d2997ca328d1eacf57cd31f03fa[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Feb 3 12:27:47 2021 +0700
+
+    perbaiki telpon
+
+[33mcommit d8a31d7ae697d63e1c30393279491ffcc5ef2865[m
+Merge: 4f5c0d6 129aee4
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Feb 3 01:48:40 2021 +0700
+
+    iianjay
+
+[33mcommit 4f5c0d6bfd132979e349421a58e74c868a782785[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Feb 3 01:46:32 2021 +0700
+
+    perbaikan rute
+
+[33mcommit 129aee4985a815570a96e3b0b28df517adfce163[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Wed Feb 3 01:32:29 2021 +0700
+
+    perbaikan api modal
+
+[33mcommit 7ca8e959b6e0ab17e520baa17d5ae666d09bfd72[m
+Merge: 8f05543 996444e
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Wed Feb 3 00:36:44 2021 +0700
+
+    ganti server api
+
+[33mcommit 8f0554384f3b009db1422c7d21758dad3b791e30[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Wed Feb 3 00:35:39 2021 +0700
+
+    ganti server api
+
+[33mcommit 996444e0fbdd0d1aa5e411d1030965e53aa6bba6[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Feb 3 00:32:58 2021 +0700
+
+    ubah icon dan url
+
+[33mcommit 24ac5ac858e37a2eba132b48ff075e2d9e8fb39d[m
+Merge: 092369b b0416e0
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Feb 3 00:20:50 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit 092369b34cf633231a82b7167e449e2b019f469b[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Feb 3 00:20:29 2021 +0700
+
+    ubah icon
+
+[33mcommit b0416e0981315fe5e37bc586dd40351807ccbc42[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 2 23:19:53 2021 +0700
+
+    kategori ekraf dan perbaikan refresh di page detail
+
+[33mcommit 0a1a20c57c69a6fb16702ce9dda5f61f5677a154[m
+Merge: 3984b4c a7eac85
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 23:14:05 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit 3984b4cf7b68e892a1671fef4312968db5bd3913[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 23:13:55 2021 +0700
+
+    aa
+
+[33mcommit a7eac8599e501b526dc2f9e963cc0588bbbe498b[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 2 22:59:16 2021 +0700
+
+    kategori ekraf dan perbaikan refresh di page detail
+
+[33mcommit 4ee78d6e9fe32040d71305830af22793a01ebe86[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 2 22:37:48 2021 +0700
+
+    menu favorite
+
+[33mcommit 40ab51488813d5da2c22b0bbbd487f52c7269e24[m
+Merge: 7c3b3e8 4fd44dd
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 2 22:36:54 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit 7c3b3e8245bd1bba5f0c91276093e706dec343f7[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 2 22:36:45 2021 +0700
+
+    menu favorite
+
+[33mcommit 4fd44dd3dbf7290b17585a896b9399e3dd0c8237[m
+Merge: b6e4db9 fc9c977
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 22:26:05 2021 +0700
+
+    ini aku perbaiki page detail menu ye i
+
+[33mcommit b6e4db9886dfb96baa458e71b63f96cbffb9962d[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 22:24:15 2021 +0700
+
+    ini aku perbaiki page detail menu ye i
+
+[33mcommit fc9c977836b5e63ac3bad8f82accdf342ea05e23[m
+Merge: 6062ba9 6ab9524
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 2 21:37:46 2021 +0700
+
+    menu resto
+
+[33mcommit 6062ba9fdbefc50e1f7db18edcaba395c71bacf2[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 2 21:37:01 2021 +0700
+
+    menu resto
+
+[33mcommit 6ab95242073fe00713d88090db4968319a88fd2d[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 21:26:19 2021 +0700
+
+    error menu pada detail resto
+
+[33mcommit 2f461f0b7f6bbbe1ecf63419e4fe476776b3634d[m
+Merge: 6fa9837 9d84423
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 21:13:51 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit 6fa98371e8df184cac00ba265b97a1c3296d3a0f[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 21:13:40 2021 +0700
+
+    ali fix
+
+[33mcommit 9d844234c072d4c1f9abaeafff14aab592b3cda4[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 2 20:50:48 2021 +0700
+
+    menambah favorite detail objek wisata
+
+[33mcommit adc4118dd488601cf329ab00a70f034eb9948c04[m
+Merge: 0f93a86 53def39
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 18:54:00 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit 0f93a86f5c343d8fec4d6945f46b40fc2a1f6f7e[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 18:53:48 2021 +0700
+
+    home fix
+
+[33mcommit 53def397f5829ec48a30befa92353f51996c00b6[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Feb 2 11:26:59 2021 +0700
+
+    perbaikan list
+
+[33mcommit f555e66bd3685234d3985528d198316f8fa02277[m
+Merge: c8aadd7 d2c8827
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 08:33:06 2021 +0700
+
+    aaa
+
+[33mcommit c8aadd76edb913a6840879df2e0449a09568eebb[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Feb 2 08:31:26 2021 +0700
+
+    final
+
+[33mcommit d2c882784585504f69dc1ed84279714e481dc8a0[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Sun Jan 31 20:19:57 2021 +0700
+
+    perbaikan
+
+[33mcommit b07932e33ada2679c2002f285fad068a68534557[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Sun Jan 31 19:51:12 2021 +0700
+
+    home
+
+[33mcommit 89c65ab058a73ed0f2634f4d9c609c463d233a7c[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Thu Jan 28 02:05:12 2021 +0700
+
+    perbaikan sedikit
+
+[33mcommit 8cc2529cc690ff4cc01d54088d26ed540991615b[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Thu Jan 28 01:06:20 2021 +0700
+
+    detail kuliner
+
+[33mcommit b661c0ad5bd05619248dcdc0b41947037c69ac9a[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Thu Jan 28 00:48:26 2021 +0700
+
+    detail cinderamata
+
+[33mcommit 8f2c6fd6ba7dfc50443827a223bdd4e5b735e06f[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Thu Jan 28 00:23:36 2021 +0700
+
+    detail travel
+
+[33mcommit a8e22f8e6ab8c825b56e06a97e2ede1523cbf3df[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Thu Jan 28 00:18:18 2021 +0700
+
+    detail desa wisata
+
+[33mcommit b5e490db37cb9d53cc01af10d92fdf827348f08c[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Wed Jan 27 05:34:03 2021 +0700
+
+    detail event
+
+[33mcommit 1ee5b8a5af0b1919e7c8b160192d5cbb47e796f1[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Wed Jan 27 05:15:32 2021 +0700
+
+    selesai list
+
+[33mcommit 07ed4744a682cc24e194d47fc850be594326c819[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Mon Jan 25 23:51:46 2021 +0700
+
+    filter restaurant and event
+
+[33mcommit 68a95064977c8f06f8acd51463d522f1e8bd640e[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Mon Jan 25 21:45:49 2021 +0700
+
+    filter tempat ibadah
+
+[33mcommit d01d6ceb047bee4558436061ce6aa842af2bca83[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Mon Jan 25 21:33:43 2021 +0700
+
+    filter hotel
+
+[33mcommit bf1ca024e12329cafcb97cbe4a7523973dae1927[m
+Merge: be31344 75e7d01
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Mon Jan 25 18:52:38 2021 +0700
+
+    try
+
+[33mcommit be313449ac35554ca513a3acdc7443d95f29c034[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Mon Jan 25 18:49:33 2021 +0700
+
+    try
+
+[33mcommit 75e7d01d07426e9aac381e84d41e6a51cf91c053[m
+Author: aliakbarnst92 <aliakbar9264@gmail.com>
+Date:   Sat Jan 23 22:59:20 2021 +0700
+
+    iiganteng
+
+[33mcommit d1ffa166b8dae75ecd601d89b30af03d5822e7ca[m
+Merge: 080caeb 811a229
+Author: aliakbarnst92 <aliakbar9264@gmail.com>
+Date:   Sat Jan 23 22:38:17 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit 811a229cd83a7261f2c190af3db7c78378c3331c[m
+Merge: 2ad3aae 1d32ac1
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sat Jan 23 22:37:28 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit 2ad3aaeb4385edd289ae9b7ade1410e5c90f8d2d[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sat Jan 23 22:37:01 2021 +0700
+
+    trymes
+
+[33mcommit 080caeb99773d6a51cecca403604a01cfe559477[m
+Author: aliakbarnst92 <aliakbar9264@gmail.com>
+Date:   Sat Jan 23 22:17:11 2021 +0700
+
+    aaA
+
+[33mcommit 1d32ac132a5ff468833a258bcc1ff13e3eba7a9c[m
+Merge: 2e55ca8 c435ccb
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Wed Jan 20 17:22:05 2021 +0700
+
+    filter objek wista
+
+[33mcommit 2e55ca82fa26f04aae1dc166e1cf055708af606b[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Wed Jan 20 15:26:04 2021 +0700
+
+    try
+
+[33mcommit c435ccb2b07f8f1810f02be99f28d398171df1b7[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Jan 20 14:57:59 2021 +0700
+
+    aaaaasasas
+
+[33mcommit 2e9f602e1ebac148901a22fc82a3f5c31b4836ce[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Mon Jan 18 20:24:07 2021 +0700
+
+    aaaa
+
+[33mcommit f6c9c02006dd382885dadc4d0036717e4b2171ea[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Mon Jan 18 00:21:28 2021 +0700
+
+    terbarukali
+
+[33mcommit 7467c0898fd9524d0dde0b777a1ca901b12208a3[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sun Jan 17 23:50:14 2021 +0700
+
+    spinner
+
+[33mcommit fa3ef3c03abd2ec71f5204eac5d5ade029d665ec[m
+Merge: 6f4c9e9 4e2fc0b
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sun Jan 17 22:40:33 2021 +0700
+
+    perbaikan ali
+
+[33mcommit 6f4c9e9c34fe4a1f1a62a3eaf591536c7dd974eb[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sun Jan 17 21:49:42 2021 +0700
+
+    ibadah1
+
+[33mcommit f6f1851615ad041e3d285aab28a878b43b2bc564[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sun Jan 17 21:48:57 2021 +0700
+
+    ibadah
+
+[33mcommit 4e2fc0b14441348c3541e2f1f8b70db79d4ad212[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Sun Jan 17 18:17:55 2021 +0700
+
+    menambahkan page filter objek wisata
+
+[33mcommit 97384aa4f6b2c1e1191698bfd38f20c65baaf419[m
+Merge: 2d0c0df 9ec6073
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Sun Jan 17 18:05:57 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit 2d0c0dfabb1a341f03ffbca4bd7e1c805cc288ee[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Sun Jan 17 18:05:48 2021 +0700
+
+    filter objek wisata
+
+[33mcommit 9ec60730821bb1735f6c7316d38ef6cfc0dbcf0c[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sun Jan 17 15:16:47 2021 +0700
+
+    allnew
+
+[33mcommit 5a13a8ad15fe8a57ca1b4f7f0ee298c3bd11cf6d[m
+Merge: dd4269b bc96ee2
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sun Jan 17 01:46:40 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit bc96ee269fa8d98b8dd7aee0d62370168135027d[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Sun Jan 17 01:45:30 2021 +0700
+
+    filter modal berhasil
+
+[33mcommit dd4269bffe54a0ebd12ed0d12a9a0f0a1121b9a4[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sun Jan 17 01:41:49 2021 +0700
+
+    aaa
+
+[33mcommit 0d2245c7d48f3f45a9c790c4e3baa926ff5a2d8d[m
+Merge: ac07499 5ed3579
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sat Jan 16 23:18:40 2021 +0700
+
+    Merge branch 'main' of https://github.com/trymersi/pariwisata-ionic into main
+
+[33mcommit ac07499bc72a2160c71ac733e40d1f5036953fa1[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Sat Jan 16 23:18:29 2021 +0700
+
+    aal
+
+[33mcommit 5ed35799adbe69dc7f61bb2e9bb3930b2c77a2ab[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Sat Jan 16 21:54:32 2021 +0700
+
+    filter objek wisata
+
+[33mcommit 63797bf68ad0d69e9321dc14e47f07a71491113a[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Fri Jan 15 01:48:52 2021 +0700
+
+    page wisata done
+
+[33mcommit 848332f22d800afec149784c52ee95e47fe35128[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Jan 13 22:00:11 2021 +0700
+
+    aliganteng
+
+[33mcommit 93cc6f1177e20325d5863e7f063a7803c74751e7[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Wed Jan 13 11:50:01 2021 +0700
+
+    page
+
+[33mcommit ea2e6b0238acc9f228abf39ac391227aa11f707c[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Jan 12 23:03:26 2021 +0700
+
+    iianjeng
+
+[33mcommit 38ae1db133bf538646a4fc5246a163f65c77f527[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Jan 12 22:38:04 2021 +0700
+
+    aaa
+
+[33mcommit 9b9221c0afbef7de1d22bb14f74591b6e6ba9b4f[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Jan 12 22:14:45 2021 +0700
+
+    page wisata1
+
+[33mcommit 8b0a54e4cadc610b5a5cf57ed71e5826a9f66dbc[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Jan 12 22:13:00 2021 +0700
+
+    page wisata
+
+[33mcommit 38db6fe7c9f7b43f33511a3f8acace8a7034c8c6[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Jan 12 12:12:51 2021 +0700
+
+    npm update fix
+
+[33mcommit f8a972d06b1ef81edbd7e8b9773faf4445827f67[m
+Merge: 522a26e 6f59586
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Jan 12 09:10:11 2021 +0700
+
+    navigator
+
+[33mcommit 522a26eeb6633dff9c32343d63aa02217fd887bf[m
+Author: aliakbarnst <blogarieframadhan@gmail.com>
+Date:   Tue Jan 12 07:49:38 2021 +0700
+
+    aaa
+
+[33mcommit 6f5958679cb952e38c781847ae93ab3c4cff0a45[m
+Author: trymersi <try.mersianto@gmail.com>
+Date:   Tue Jan 12 05:02:01 2021 +0700
+
+    edit dikit

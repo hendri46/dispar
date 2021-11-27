@@ -1,0 +1,86 @@
+<ion-header class="primary-header browse-page">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title >{{ detail?.nama }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile-page standard-page" [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Segarkan..."></ion-refresher-content>
+  </ion-refresher>
+  <ion-list class="menu-list" style="margin-left: 10px;">
+      <ion-item>
+        <ion-label>Nama : {{ detail?.nama }}</ion-label>
+      </ion-item> 
+      <ion-item>
+        <ion-label>Jenis Usaha : {{ detail?.jenis_usaha }}</ion-label>
+      </ion-item> 
+      <ion-item>
+        <ion-label>Alamat : {{ detail?.alamat }}</ion-label>
+      </ion-item> 
+      <ion-item>
+        <ion-label>Kabupaten : {{ detail?.nama_kabupaten }}</ion-label>
+      </ion-item> 
+      <ion-item>
+        <ion-label>Kategori Usaha : {{ detail?.nama_kategori }}</ion-label>
+      </ion-item> 
+      <ion-item>
+        <ion-label>Kontak : {{ detail?.nomor_kontak }}</ion-label>
+      </ion-item> 
+
+      <div class="opened-time" *ngIf="detail?.deskripsi != ''">
+        <h1>Deskripsi</h1>
+        <ion-list padding-horizontal class="menus ion-text-justify" style="font-size: 12px;" [innerHTML]="detail?.deskripsi">
+        </ion-list>          
+      </div>  
+    <div class="standard-page">
+      <ion-item class="restaurant-actions" lines="none">
+      <ion-button (click)=arah(detail?.latitude,detail?.longitude) class="contact-button" slot="start">
+        <i class="fas fa-route"></i> 
+        Rute
+      </ion-button>
+    </ion-item>
+    </div>
+    <div class="restaurant-map">
+      <h1>Lokasi</h1>
+      <div #mapElement class="map"></div>        
+    </div>
+    
+    <div *ngIf="galeri?.length > 0" class="trends">
+      <h1>Galeri Cinderamata</h1>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let item of galeri">
+        <div class="menu-image">
+          <ion-thumbnail style="height: 160px; width: 100%;">
+          <img src="{{ path?.gambar_cindra }}{{item}}" alt="">
+          </ion-thumbnail> 
+        </div>
+      </ion-slide>
+    </ion-slides>
+    </div>
+
+    <div *ngIf="gallery_kuliner?.length > 0" class="trends">
+      <h1>Galeri Kuliner</h1>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let item of gallery_kuliner">
+        <div class="menu-image">
+          <ion-thumbnail style="height: 160px; width: 100%;">
+          <img src="{{ path?.gambar_kuline }}{{item}}" alt="">
+          </ion-thumbnail> 
+        </div>
+      </ion-slide>
+    </ion-slides>
+    </div>
+    
+  </ion-list>
+
+</ion-content>
+
+

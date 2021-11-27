@@ -1,0 +1,98 @@
+<!-- <ion-header class="blank-header">
+  <ion-toolbar>
+    <ion-title color="success"></ion-title>     
+    <ion-buttons slot="end">
+      <ion-button color="success">Edit</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+
+
+<ion-content class="profile-page">
+  <div class="profile-page-content">
+    <ion-button fill="clear" class="profile-edit-button" (click)="openProfilePage()">Edit</ion-button>
+    <div class="profile-content">
+      <div class="profile-header">
+        <img src="../../assets/images/profile.jpg" alt="">
+        <h3>Johnatten Doe<i class="far fa-badge-check"></i></h3>
+        <p>@johnattendoe</p>
+      </div>
+      <ion-row class="profile-info">
+        <ion-col>
+          <div class="bigs">
+            <div class="big-text">3</div>
+            <div class="big-text-desc">ORDER</div>
+            <i class="fal fa-drumstick-bite"></i>
+  
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="bigs">
+            <div class="big-text">12</div>
+            <div class="big-text-desc">FAVORITE</div>
+            <i class="fal fa-heart"></i>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="bigs">
+            <div class="big-text">25</div>
+            <div class="big-text-desc">INVITE</div>
+            <i class="fal fa-spade"></i>          
+          </div>
+        </ion-col>
+      </ion-row>
+  
+  
+    <ion-list class="user-menu">
+      <ion-item (click)="openProfilePage()">
+        <i slot="start" class="fal fa-user"></i>
+        <ion-label>Edit Profile</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>
+  
+       
+      <ion-item (click)="openOrderPage()">
+        <i slot="start" class="fal fa-drumstick-bite"></i>
+        <ion-label>My Orders</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>
+  
+      <ion-item routerLink="/addresslist" detail="false">
+        <i slot="start" class="fal fa-heart"></i>
+        <ion-label>My Address</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>
+  
+      <ion-item (click)="openCouponsPage()">
+        <i slot="start" class="fal fa-badge-percent"></i>
+        <ion-label>My Coupons</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>
+
+      <ion-item (click)="openInvitePage()">
+        <i slot="start" class="fal fa-spade"></i>
+        <ion-label>Friend Invitations</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>
+  
+      <ion-item (click)="openSupportPage()">
+        <i slot="start" class="fal fa-question-circle"></i>
+        <ion-label>Support Center</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>
+      
+      <ion-item (click)="openAlertlogout()" detail="false">
+        <i slot="start" class="fal fa-sign-out-alt"></i>
+        <ion-label>Logout</ion-label>
+        <i slot="end" class="fal fa-chevron-right"></i>
+      </ion-item>        
+  
+    </ion-list>
+  
+
+  </div>
+  
+  </div>
+
+</ion-content>

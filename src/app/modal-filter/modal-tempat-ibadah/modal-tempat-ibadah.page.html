@@ -1,0 +1,47 @@
+<ion-header class="primary-header light-header">
+  <ion-toolbar color="light">
+    <ion-title slot="start" color="success">Pencarian</ion-title>
+    <ion-buttons class="header-icons" slot="end" color="success">
+      <ion-button (click)="closeModal()"><i class="far fa-times"></i></ion-button>
+    </ion-buttons>      
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+<div class="filter-page-form" padding>
+
+<ion-item class="float-inputs custom-range-item">
+  <ion-input class="search-icon" [(ngModel)]="keyword" placeholder="Masukan Kata Kunci"  style="text-align: left;"></ion-input>
+  <ion-icon name="search" color="light"  style="padding-left: 5px; padding-right: 5px;"></ion-icon>
+</ion-item>
+
+
+<ion-item>
+  <ion-label position="floating">Kabupaten</ion-label>
+  <ion-select  [(ngModel)]="selectKabupaten" interface="popover" [interfaceOptions]="customPopoverOptions">
+    <ion-select-option value="">Pilih Kabupaten</ion-select-option>
+    <ion-select-option *ngFor='let item of kabupaten' [value]="item?.id">{{ item?.nama }}</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Agama</ion-label>
+  <ion-select  [(ngModel)]="selectAgama" interface="popover" [interfaceOptions]="customPopoverOptions">
+    <ion-select-option value="">Pilih Agama</ion-select-option>
+    <ion-select-option value="Islam">Islam</ion-select-option>
+    <ion-select-option value="Katolik">Katolik</ion-select-option>
+    <ion-select-option value="Hindu">Hindu</ion-select-option>
+    <ion-select-option value="Buddha">Buddha</ion-select-option>
+    <ion-select-option value="Khonghucu">Khonghucu</ion-select-option>
+  </ion-select>
+</ion-item>
+
+
+  <div class="action-buttons-zone">
+    <ion-button class="action-buttons" (click)="closeModal()" color="success">Filter Pencarian</ion-button>
+  </div>
+</div>
+
+</ion-content>

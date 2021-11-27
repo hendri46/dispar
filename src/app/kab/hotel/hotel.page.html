@@ -1,0 +1,80 @@
+<ion-header class="primary-header browse-page">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-title slot="start">Kabupaten</ion-title> -->
+    <!-- <ion-button slot="end" fill="clear" color="light" (click)="presentModal()">
+       Filter <ion-icon name="filter-outline"></ion-icon>
+    </ion-button> -->
+    <ion-input placeholder="Pencarian"  autofocus="true" (ionChange)="getPencarian($event)" style="text-align: left; color: black;"></ion-input>
+    <ion-icon name="search" color="dark" slot="end" style="padding-left: 0px; padding-right: 5px;"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="itemsWisata?.length == 0">
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="tarik untuk segarkan"
+        refreshingSpinner="circles"
+        refreshingText="Segarkan..."></ion-refresher-content>
+      </ion-refresher>
+      
+    <div class="favorites-zone-kab reviews-zone">
+      <ion-list class="favorites">
+          <ion-item-sliding *ngFor="let item of itemKab">
+              <ion-item lines="none" [routerLink]="'/list-hotel/'+ item?.id" routerDirection="forward">
+                <div class="restaurant-image">
+                  <ion-thumbnail style="height: 100%; width: 50%;">
+                    <img src="{{path?.kabupaten}}{{item.gambar}}">
+                    </ion-thumbnail> 
+                </div>                  
+                <ion-label>
+                  <h2 class="ion-text-wrap">{{ item.nama }} </h2>
+                  <!-- <ion-badge *ngIf="item?.jenis == 1" color="tertiary">Alam</ion-badge>
+                  <ion-badge *ngIf="item?.jenis == 2" color="success">Buatan</ion-badge>
+                  <ion-badge *ngIf="item?.jenis == 3" color="warning">Budaya</ion-badge> -->
+                </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+        </ion-list>  
+    </div>
+      <!-- <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+          <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="Lihat lebih banyak...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll> -->
+</ion-content>
+
+<ion-content *ngIf="itemsWisata?.length > 0">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+      <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="tarik untuk segarkan"
+      refreshingSpinner="circles"
+      refreshingText="Segarkan..."></ion-refresher-content>
+    </ion-refresher>
+    
+    <div class="favorites-zone reviews-zone">
+      <ion-list class="favorites">
+          <ion-item-sliding *ngFor="let item of itemsWisata">
+              <ion-item lines="none" [routerLink]="'/detail-hotel/'+ item?.id" routerDirection="forward">
+                <div class="restaurant-image">
+                  <img width="auto" height="auto" src="{{path?.hotel}}{{item.gambar}}">
+                </div>                  
+                <ion-label>
+                  <h2 class="ion-text-wrap">{{ item.nama_kabupaten }} - {{ item.nama }}</h2>
+                </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+        </ion-list>  
+    </div>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="Lihat lebih banyak...">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="auth-page">
+    <div class="auth-content">
+      <div class="auth-title">
+          <h1>Welcome back</h1>
+          <h5>Sign up continue</h5>        
+      </div>
+      <div class="content-zone">
+        <form [formGroup]="onRegisterForm">
+          <ion-item>
+            <ion-label position="floating" required>Name / Surname</ion-label>
+            <ion-input formControlName="name" [(ngModel)]="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" required>Email Address</ion-label>
+            <ion-input type="email" formControlName="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" required>Password</ion-label>
+            <ion-input type="password" formControlName="password" [(ngModel)]="password"></ion-input>
+          </ion-item> 
+          <ion-button class="signup-button" color="success" [disabled]="!onRegisterForm.valid" (click)="goToast()">SIGN UP</ion-button>   
+          <p class="auth-text">or</p>
+          <div class="social-buttons">
+            <ion-button class="facebook-icon"><i class="fab fa-facebook-f"></i></ion-button>
+            <ion-button class="google-plus-icon"><i class="fab fa-google-plus-g"></i></ion-button>
+          </div>
+          <p class="auth-text-link">Don’t have an account? <a routerLink="/auth" color="light">Sign in</a></p>
+        
+        </form>
+      </div>      
+
+    </div>
+    <div class="watermark"></div>
+  </div>
+</ion-content>

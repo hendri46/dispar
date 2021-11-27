@@ -1,0 +1,3177 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+$fa-font-path: "../src/assets/webfonts";
+$font-path: "../src/assets/fonts";
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../src/assets/fonts/Poppins-Bold.eot');
+    src: url('../src/assets/fonts/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../src/assets/fonts/Poppins-Bold.woff2') format('woff2'),
+        url('../src/assets/fonts/Poppins-Bold.woff') format('woff'),
+        url('../src/assets/fonts/Poppins-Bold.ttf') format('truetype'),
+        url('../src/assets/fonts/Poppins-Bold.svg#Poppins-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('../src/assets/fonts/Poppins-Light.eot');
+    src: url('../src/assets/fonts/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+        url('../src/assets/fonts/Poppins-Light.woff2') format('woff2'),
+        url('../src/assets/fonts/Poppins-Light.woff') format('woff'),
+        url('../src/assets/fonts/Poppins-Light.ttf') format('truetype'),
+        url('../src/assets/fonts/Poppins-Light.svg#Poppins-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../src/assets/fonts/Poppins-Regular.eot');
+    src: url('../src/assets/fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../src/assets/fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../src/assets/fonts/Poppins-Regular.woff') format('woff'),
+        url('../src/assets/fonts/Poppins-Regular.ttf') format('truetype'),
+        url('../src/assets/fonts/Poppins-Regular.svg#Poppins-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-ExtraBold';
+    src: url('../src/assets/fonts/Poppins-ExtraBold.eot');
+    src: url('../src/assets/fonts/Poppins-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../src/assets/fonts/Poppins-ExtraBold.woff2') format('woff2'),
+        url('../src/assets/fonts/Poppins-ExtraBold.woff') format('woff'),
+        url('../src/assets/fonts/Poppins-ExtraBold.ttf') format('truetype'),
+        url('../src/assets/fonts/Poppins-ExtraBold.svg#Poppins-ExtraBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "../src/assets/scss/light.scss";
+@import "../src/assets/scss/fontawesome.scss";
+@import "../src/assets/scss/solid.scss";
+@import "../src/assets/scss/brands.scss";
+@import "../src/assets/scss/regular.scss";
+
+
+
+.heart {
+    @extend %fa-icon;
+    @extend .fas;
+
+    &:before {
+        content: fa-content($fa-var-heart);
+    }
+}
+
+.heart {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-heart);
+    }
+}
+
+.heart {
+    @extend %fa-icon;
+    @extend .far;
+
+    &:before {
+        content: fa-content($fa-var-heart);
+    }
+}
+
+.heart {
+    @extend %fa-icon;
+    @extend .fal;
+
+    &:before {
+        content: fa-content($fa-var-heart);
+    }
+}
+
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+ion-button,
+button,
+a {
+    font-family: 'Poppins-Regular';
+}
+
+h1 {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+    margin: 10px 0 0 0 !important;
+    font-family: 'Poppins-Bold';
+}
+
+.auth-page h1 {
+    font-size: 36px;
+    color: var(--ion-color-light);
+    padding: 0 !important;
+}
+
+h1.big-title {
+    font-size: 14px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 20px !important;
+    height: 6px;
+    border-radius: 3px;
+    margin: 0 2px !important;
+    background-color: #73ff00;
+}
+
+.sort-list .in-item {
+    max-width: none !important;
+}
+
+ion-header {
+    --background: var(--ion-color-light) !important;
+
+    ion-toolbar {
+        padding: 20px 0 0 0 !important;
+        --border-width: 0px !important;
+
+        .header-icons {
+            i {
+                color: var(--ion-color-primary);
+                font-size: 18px;
+                margin: 0 6px;
+            }
+        }
+    }
+}
+
+ion-tabs {
+    
+    ion-tab-bar {
+        height: 60px;
+        
+        
+        ion-tab-button {
+            
+            i {
+                font-size: 24px;
+                
+            }
+
+            ion-label {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+ion-item {
+    --padding-start: 0 !important;
+}
+
+.full-page {
+    --padding: 36px !important;
+    --padding-top: 36px;
+    --padding-bottom: 36px;
+    --padding-start: 36px;
+    --padding-end: 36px;
+}
+
+/* Buttons */
+
+
+.action-buttons-zone {
+    padding: 15px;
+    text-align: center;
+
+    .action-buttons {
+        --border-radius: 24px;
+        height: 48px;
+    }
+}
+
+.button-left-icon {
+    margin-right: 7px;
+    font-size: 20px;
+}
+
+
+/* Forms Elements: Inputs */
+.float-inputs {
+    --inner-border-width: 0 !important;
+}
+
+/* Headers */
+
+.full-header {
+    .only-button {
+        display: inline;
+
+        .button-text {
+            display: none !important;
+        }
+    }
+
+    background: var(--ion-color-primary);
+
+    ion-toolbar {
+        --background: none !important;
+        --border-width: 0 !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        position: relative;
+
+        ion-title {
+            font-size: 32px;
+            color: var(--ion-color-light);
+            font-family: 'Poppins-Bold';
+            text-align: left;
+            padding: 0;
+            position: relative;
+
+        }
+
+        ion-buttons {}
+
+        ion-searchbar {
+            padding-top: 0 !important;
+        }
+    }
+}
+
+.primary-header {
+    background: var(--ion-color-primary);
+
+    ion-toolbar {
+        --background: none !important;
+        --border-width: 0 !important;
+        padding-left: 0px !important;
+        padding-right: 12px !important;
+        position: relative;
+
+        
+        ion-title {
+            font-size: 30px;
+            color: var(--ion-color-light);
+            font-family: 'Poppins-Bold';
+            text-align: left;
+            padding: 0;
+            position: relative;
+
+        }
+
+
+        ion-searchbar {
+            padding-top: 0 !important;
+        }
+
+        ion-input {
+            position: relative;
+            // --padding-start: 30px;
+            border: none;
+            &:after {
+                font-size: 9px;
+                position: absolute;
+                font-family: "Font Awesome 5 Pro";
+                --placeholder-color: var(--ion-color-light);	
+                --color: var(--ion-color-light);
+                --icon-color: var(--ion-color-light);
+                --cancel-button-color: var(--ion-color-light);
+                --clear-button-color: var(--ion-color-light);
+                font-family: "Font Awesome 5 Brands";
+                left: 0px;
+            }
+    
+            input {
+                margin-left: 0px;
+                border-bottom: 1px solid var(--ion-color-primary) !important;
+            }
+        }
+    }
+    ion-col{
+        background-color: var(--ion-color-light);
+        }
+    .menu-info {
+        background: -webkit-linear-gradient(30deg,#000000,#000000);
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 55px;
+        border-radius: 0px 0px 5px 5px;
+        span{
+            position: relative;
+        }
+        .menu-name {
+            flex-wrap: nowrap;
+            position: relative;
+            text-align: center !important;;
+            top:2px;
+            font-size: 12px;
+            font-family: 'Poppins-Regular';
+            color: var(--ion-color-light);
+
+        }
+        .harga-normal-produk{
+            position: absolute;
+            text-decoration: line-through;
+            bottom: 0px;
+            left: 10px;
+            font-size: 14px;
+            font-family: 'Poppins-Regular';
+            color: var(--ion-color-danger)
+        }
+
+        .restaurant-name {
+            background-color: var(--ion-color-light);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+            position: relative;
+            bottom: 10px;
+            font-style: italic;
+            font-size: 14px;
+            font-family: 'Poppins-Regular';
+            color: var(--ion-color-medium)
+        }
+    }
+    h1 {
+        font-family: 'Poppins-Regular';
+        color: var(--ion-color-secondary);
+        text-align: left;
+        margin-bottom: 0;
+        padding-left: 16px;
+        display: inline-block;
+    }
+
+    .view-all-button {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        font-size: 16px;
+        font-family: 'Poppins-Light';
+        line-height: 1 !important;
+        height: 16px !important;
+
+        i {
+            margin-left: 5px;
+            font-size: 13px;
+        }
+    }
+    .col-ali{
+        display: block;
+        // border-radius: 7px;
+        overflow: hidden !important;
+        // border: 1px  #bbbbbb;
+        // border-color: black; 
+        // border-width: .01em; 
+        // border-style:solid; margin-bottom : 5px;
+        // background-color: lightgrey
+
+        ion-row{ 
+            background-color: var(--ion-color-light);
+            ion-card{ 
+                width:100% !important; 
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+             }
+             }
+    }      .menu-image {
+                background-color: var(--ion-color-light);
+                width: 100% !important;
+                position: relative;
+                flex: inherit;
+                display: block;
+                
+                .notify-badge{
+                    position: absolute;
+                    left:5px;
+                    top:10px;
+                    background:rgba(0, 0, 0, 0.616);
+                    text-align: center;
+                    border-radius: 30px 30px 30px 30px;
+                    color:white;
+                    padding:5px 10px;
+                    font-size:12px;
+                }
+
+                
+
+                img {
+                    position: relative;
+                    width: 100% !important;
+                    display: block;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+                    border-radius: 3px;
+                    overflow: hidden !important;
+
+                }
+                .restaurant-reviews {
+                    text-align: left;
+
+                    i {
+                        color: var(--ion-color-warning);
+                        margin: 0 5px;
+                    }
+                    
+                    ion-button{
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+                        border-radius: 3px;
+                        color:  rgba(255, 255, 255, 0.897);
+                        background-color: #008000;
+                    }
+
+                    .review-counts {
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+                        border-radius: 7px;
+                    }
+                }
+
+                .notify-badge{
+                    position: absolute;
+                    left:5px;
+                    top:10px;
+                    background:rgba(0, 0, 0, 0.616);
+                    text-align: center;
+                    border-radius: 30px 30px 30px 30px;
+                    color:white;
+                    padding:5px 10px;
+                    font-size:12px;
+                }
+            }
+  
+            ion-row {
+                position: relative;
+                color: var(--ion-color-secondary);
+                background-color: var(--ion-color-light);
+
+                .restaurant-reviews {
+                    text-align: left;
+
+                    i {
+                        color: var(--ion-color-warning);
+                        margin: 0 5px;
+                    }
+                    
+                    ion-button{
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+                        border-radius: 3px;
+                        color:  rgba(255, 255, 255, 0.897);
+                        background-color: #008000;
+                    }
+
+                    .review-counts {
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+                        border-radius: 7px;
+                    }
+                }
+
+                .menu-price {
+                    text-align: right;
+                }
+
+            }
+
+        .swiper-slide-active {
+            transform: scale(1);
+        }
+}
+.kategori_per_produk {
+    ion-grid{
+    background-color: var(--ion-color-light);
+    }
+    ion-row{
+    background-color: var(--ion-color-light);
+    }
+    ion-col{
+        background-color: var(--ion-color-light);
+        }
+    .menu-info {
+        background: -webkit-linear-gradient(30deg,#000000,#000000);
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 55px;
+        border-radius: 0px 0px 5px 5px;
+        span{
+            position: relative;
+        }
+        .menu-name {
+            flex-wrap: nowrap;
+            position: relative;
+            text-align: center !important;;
+            top:2px;
+            font-size: 12px;
+            font-family: 'Poppins-Regular';
+            color: var(--ion-color-light);
+
+        }
+        .harga-normal-produk{
+            position: absolute;
+            text-decoration: line-through;
+            bottom: 0px;
+            left: 10px;
+            font-size: 14px;
+            font-family: 'Poppins-Regular';
+            color: var(--ion-color-danger)
+        }
+
+        .restaurant-name {
+            background-color: var(--ion-color-light);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+            position: relative;
+            bottom: 10px;
+            font-style: italic;
+            font-size: 14px;
+            font-family: 'Poppins-Regular';
+            color: var(--ion-color-medium)
+        }
+    }
+    h1 {
+        font-family: 'Poppins-Regular';
+        color: var(--ion-color-secondary);
+        text-align: left;
+        margin-bottom: 0;
+        padding-left: 16px;
+        display: inline-block;
+    }
+
+    .view-all-button {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        font-size: 16px;
+        font-family: 'Poppins-Light';
+        line-height: 1 !important;
+        height: 16px !important;
+
+        i {
+            margin-left: 5px;
+            font-size: 13px;
+        }
+    }
+    .col-ali{
+        display: block;
+        // border-radius: 7px;
+        overflow: hidden !important;
+        // border: 1px  #bbbbbb;
+        // border-color: black; 
+        // border-width: .01em; 
+        // border-style:solid; margin-bottom : 5px;
+        // background-color: lightgrey
+
+        ion-row{ 
+            background-color: var(--ion-color-light);
+            ion-card{ 
+                width:100% !important; 
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+             }
+             }
+    }      .menu-image {
+                background-color: var(--ion-color-light);
+                width: 100% !important;
+                position: relative;
+                flex: inherit;
+                display: block;
+                
+                .notify-badge{
+                    position: absolute;
+                    left:5px;
+                    top:10px;
+                    background:rgba(0, 0, 0, 0.616);
+                    text-align: center;
+                    border-radius: 30px 30px 30px 30px;
+                    color:white;
+                    padding:5px 10px;
+                    font-size:12px;
+                }
+
+                
+
+                img {
+                    position: relative;
+                    width: 100% !important;
+                    display: block;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+                    border-radius: 3px;
+                    overflow: hidden !important;
+
+                }
+                .restaurant-reviews {
+                    text-align: left;
+
+                    i {
+                        color: var(--ion-color-warning);
+                        margin: 0 5px;
+                    }
+                    
+                    ion-button{
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+                        border-radius: 3px;
+                        color:  rgba(255, 255, 255, 0.897);
+                        background-color: #008000;
+                    }
+
+                    .review-counts {
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+                        border-radius: 7px;
+                    }
+                }
+
+                .notify-badge{
+                    position: absolute;
+                    left:5px;
+                    top:10px;
+                    background:rgba(0, 0, 0, 0.616);
+                    text-align: center;
+                    border-radius: 30px 30px 30px 30px;
+                    color:white;
+                    padding:5px 10px;
+                    font-size:12px;
+                }
+            }
+  
+            ion-row {
+                position: relative;
+                color: var(--ion-color-secondary);
+                background-color: var(--ion-color-light);
+
+                .restaurant-reviews {
+                    text-align: left;
+
+                    i {
+                        color: var(--ion-color-warning);
+                        margin: 0 5px;
+                    }
+                    
+                    ion-button{
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+                        border-radius: 3px;
+                        color:  rgba(255, 255, 255, 0.897);
+                        background-color: #008000;
+                    }
+
+                    .review-counts {
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+                        border-radius: 7px;
+                    }
+                }
+
+                .menu-price {
+                    text-align: right;
+                }
+
+            }
+
+        .swiper-slide-active {
+            transform: scale(1);
+        }
+}
+
+.light-header {
+    background: var(--ion-color-light);
+
+    ion-toolbar {
+        --background: none !important;
+        --border-width: 0 !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        position: relative;
+
+        ion-title {
+            font-size: 32px;
+            color: var(--ion-color-primary);
+            font-family: 'Poppins-Bold';
+            text-align: left;
+            padding: 0;
+            position: relative;
+
+        }
+
+        ion-buttons {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        ion-searchbar {
+            padding-top: 0 !important;
+        }
+    }
+}
+
+
+/* Custom Action Sheets */
+.custom-action {
+    --color: var(--ion-color-secondary);
+    --height: auto;
+    font-size: 18px !important;
+
+    .action-sheet-container {
+        background: var(--ion-color-light);
+        -webkit-padding-start: 0;
+        padding-inline-start: 0;
+        -webkit-padding-end: 0;
+        padding-inline-end: 0;
+
+        .action-sheet-group {
+            margin: 0 !important;
+            background: none !important;
+            border-radius: 0 !important;
+
+            .action-sheet-title {
+                background: var(--ion-color-grabe);
+                color: var(--ion-color-primary);
+
+            }
+        }
+
+        .action-sheet-group-cancel {
+            button {
+                background: var(--ion-color-primary);
+                color: var(--ion-color-light);
+                font-family: 'Poppins-Light' !important;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+/* Custom Popover */
+.custom-popover {
+    ion-list {
+        margin: 10px;
+        text-align: center;
+
+        ion-button {
+            margin: 20px auto;
+        }
+    }
+}
+
+
+/* Standard Page Classes */
+.standard-page {
+
+    // --padding-start: 16px;
+    // --padding-end: 16px;
+    h1 {
+        padding: 0 16px !important;
+    }
+
+    .restaurant-info {
+        color: var(--ion-color-dark);
+        padding: 0 16px !important;
+
+        ion-col {
+            margin: 10px 0;
+            --ion-grid-column-padding: 10px 0 !important;
+
+            i {
+                color: var(--ion-color-primary);
+            }
+
+            .review-counts {
+                margin-left: 5px;
+            }
+        }
+
+        .restaurant-reviews {
+            text-align: right;
+        }
+    }
+
+    .restaurant-actions {
+        --border-width: 1px 0;
+        --min-height: 60px;
+        --border-color: var(--ion-color-grabe);
+
+        .actions-buttons {
+            margin-left: 16px;
+
+            ion-button {
+                --border-radius: 50% !important;
+                --background: var(--ion-color-grabe);
+                height: 40px;
+                width: 40px;
+                margin-right: 5px;
+            }
+        }
+
+        .contact-button {
+            --border-radius: 20px !important;
+            --padding-end: 20px;
+            --padding-start: 20px;
+            min-height: 40px;
+            font-size: 15px;
+            font-family: 'Poppins-Regular';
+
+            i {
+                margin-right: 5px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+ion-item {
+    --highlight-color-focused: none;
+}
+
+.address-zone {
+    padding: 0 16px !important;
+    position: relative;
+
+    ion-input {
+        position: relative;
+        // --padding-start: 30px;
+        border: none;
+        // --background: var(--ion-color-grabe) !important;
+
+
+        &:after {
+            position: absolute;
+            font-family: "Font Awesome 5 Pro";
+            color: var(--ion-color-dark) !important;
+            // font-family: "Font Awesome 5 Brands";
+            left: 0px;
+        }
+
+        input {
+            margin-left: 30px;
+            border-bottom: 1px solid var(--ion-color-grabe) !important;
+        }
+    }
+
+    ion-input.map-address {
+        &:after {
+            content: "\f3c5";
+        }
+    }
+
+    ion-button {
+        position: absolute;
+        right: 16px;
+        top: -5px;
+        z-index: 9;
+        --background: none !important;
+        --background-activated: none !important;
+        --background-focused: none !important;
+        --padding-start: 0 !important;
+        --padding-top: 0 !important;
+        --padding-end: 0 !important;
+        --padding-bottom: 0 !important;
+        --color: var(--ion-color-secondary);
+        margin: 0 !important;
+        outline: none !important;
+    }
+
+    ion-input.search-icon {
+        &:after {
+            content: "\f002";
+        }
+    }
+}
+
+.check-bars {
+    padding: 20px 10px;
+    text-align: center;
+
+    ion-label {}
+
+    ion-toggle {
+        vertical-align: bottom;
+        margin: 0 10px;
+        --background: var(--ion-color-grabe) !important;
+        --background-checked: var(--ion-color-grabe) !important;
+        --handle-background: var(--ion-color-primary) !important;
+        --handle-background-checked: var(--ion-color-primary) !important;
+
+        // .toggle-icon {
+        //     --background: var(--ion-color-grabe) !important;
+        // }
+    }
+
+}
+
+h1 {
+    font-size: 16px;
+    font-family: 'Poppins-Bold';
+    color: var(--ion-color-secondary);
+    text-align: left;
+    margin-bottom: 0;
+    padding-left: 16px;
+    display: inline-block;
+}
+
+
+.trends {
+    position: relative;
+
+    span {
+        font-family: 'Poppins-Bold';
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        font-family: 'Poppins-Bold';
+        color: var(--ion-color-secondary);
+        text-align: left;
+        margin-bottom: 0;
+        padding-left: 16px;
+        display: inline-block;
+    }
+
+    .view-all-button {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        font-size: 16px;
+        font-family: 'Poppins-Light';
+        line-height: 1 !important;
+        height: 16px !important;
+
+        i {
+            margin-left: 5px;
+            font-size: 13px;
+        }
+    }
+
+    ion-slides {
+        margin: 0px 0px;
+        display: block;
+        width: calc(100vw - 60px) !important;
+        overflow: visible !important;
+        
+        ion-slide {
+            margin: 5px;
+            display: block;
+            width: calc(100vw - 70px) !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+            border-radius: 7px;
+            overflow: hidden !important;
+            font-size: 14px !important;
+            transition-duration: 300ms;
+            transform: scale(0.95);
+         
+            .menu-image {
+                width: 100% !important;
+                position: relative;
+                flex: inherit;
+                display: block;
+
+                img {
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                }
+
+                .menu-info {
+                    background-color: var(--ion-color-light);
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    right: 0;
+                    display: block;
+                    height: 50px;
+
+                    .menu-name {
+                        position: absolute;
+                        left: 10px;
+                        bottom: 20px;
+                        font-size: 14px;
+                        font-family: 'Poppins-Bold';
+                        color: var(--ion-color-secondary);
+
+                    }
+
+                    .restaurant-name {
+                        position: absolute;
+                        bottom: 0px;
+                        left: 10px;
+                        font-size: 14px;
+                        font-family: 'Poppins-Regular';
+                        color: var(--ion-color-medium)
+                    }
+                }
+
+            }
+
+            ion-row {
+                flex-wrap: nowrap;
+                margin: 0 !important;
+                padding: 0 6px !important;
+                position: relative;
+                color: var(--ion-color-secondary);
+                background-color: var(--ion-color-light);
+
+                .restaurant-reviews {
+                    text-align: left;
+
+                    i {
+                        color: var(--ion-color-danger);
+                        margin: 0 5px;
+                    }
+
+                    .review-counts {}
+                }
+
+                .menu-price {
+                    text-align: right;
+                }
+
+            }
+        }
+
+        .swiper-slide-active {
+            transform: scale(1);
+        }
+    }
+}
+
+
+.home {
+    position: relative;
+
+    span {
+        font-family: 'Poppins-Bold';
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        font-family: 'Poppins-Bold';
+        color: var(--ion-color-secondary);
+        text-align: left;
+        margin-bottom: 0;
+        padding-left: 16px;
+        display: inline-block;
+    }
+
+    .view-all-button {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        font-size: 16px;
+        font-family: 'Poppins-Light';
+        line-height: 1 !important;
+        height: 16px !important;
+
+        i {
+            margin-left: 5px;
+            font-size: 13px;
+        }
+    }
+
+    ion-slides {
+        margin: 0px 0px;
+        display: block;
+        // width: calc(100vw - 60px) !important;
+        overflow: visible !important;
+        
+        ion-slide {
+            // margin: 5px;
+            display: block;
+            // width: calc(100vw - 70px) !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+            border-radius: 7px;
+            overflow: hidden !important;
+            font-size: 14px !important;
+            transition-duration: 300ms;
+            transform: scale(0.95);
+            
+            .menu-image {
+                width: 100% !important;
+                position: relative;
+                flex: inherit;
+                display: block;
+                height: 250px;
+
+                img {
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                    height: 100%;
+                }
+
+                .menu-info {
+                    position:absolute;
+                    left:0;
+                    margin:0 auto;
+                    bottom:15%;
+                    width:auto;
+                    background-color:rgba(127, 191, 63, 0.7);
+                    padding:5px;
+                    color: #ffffff;
+
+                    .menu-name {
+                        position: absolute;
+                        left: 10px;
+                        bottom: 20px;
+                        font-size: 14px;
+                        font-family: 'Poppins-Bold';
+                        color: var(--ion-color-secondary);
+
+                    }
+
+                    .restaurant-name {
+                        position: absolute;
+                        bottom: 0px;
+                        left: 10px;
+                        font-size: 14px;
+                        font-family: 'Poppins-Regular';
+                        color: var(--ion-color-medium)
+                    }
+                }
+
+            }
+
+            ion-row {
+                flex-wrap: nowrap;
+                margin: 0 !important;
+                padding: 0 6px !important;
+                position: relative;
+                color: var(--ion-color-secondary);
+                background-color: var(--ion-color-light);
+
+                .restaurant-reviews {
+                    text-align: left;
+
+                    i {
+                        color: var(--ion-color-danger);
+                        margin: 0 5px;
+                    }
+
+                    .review-counts {}
+                }
+
+                .menu-price {
+                    text-align: right;
+                }
+
+            }
+        }
+
+        .swiper-slide-active {
+            transform: scale(1);
+        }
+    }
+}
+
+.populars {
+    position: relative;
+    // Animations
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+
+    h1 {
+        font-family: 'Poppins-Bold';
+        color: var(--ion-color-secondary);
+        text-align: left;
+        margin-bottom: 0;
+        padding-left: 16px;
+        display: inline-block;
+    }
+
+    .view-all-button {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        font-size: 16px;
+        font-family: 'Poppins-Light';
+        line-height: 1 !important;
+        height: 16px !important;
+
+        i {
+            margin-left: 5px;
+            font-size: 13px;
+        }
+    }
+
+    .list-restaurants {
+        margin: 20px;
+        display: block;
+        width: calc(100vw - 40px) !important;
+        overflow: hidden !important;
+        border-radius: 7px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+        .menu-image {
+            height: 90px !important;
+            padding: 5px;
+            position: relative;
+            flex: inherit;
+            display: block;
+            white-space: nowrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            margin-bottom: 5px;
+
+            img {
+                position: relative;
+                width: 150px;
+                border-radius: 5px;
+                overflow: hidden;
+                margin: 5px;
+                display: inline;
+            }
+        }
+
+        .menu-info {
+            background-color: var(--ion-color-light);
+            display: block;
+            position: relative;
+            margin-left: 10px;
+
+            .menu-name {
+                font-size: 14px;
+                font-family: 'Poppins-Bold';
+                color: var(--ion-color-secondary);
+            }
+
+            .restaurant-address {
+                font-size: 1px;
+                font-family: 'Poppins-Regular';
+                color: var(--ion-color-dark)
+            }
+        }
+
+        ion-row {
+            flex-wrap: nowrap;
+            margin: 0 !important;
+            padding: 0 6px 6px !important;
+            position: relative;
+            color: var(--ion-color-secondary);
+            background-color: var(--ion-color-light);
+
+            .restaurant-reviews {
+                text-align: left;
+
+                i {
+                    color: var(--ion-color-danger);
+                    margin: 0 5px;
+                }
+
+                .review-counts {}
+            }
+
+            .open-time {
+                text-align: right;
+            }
+        }
+
+    }
+
+    .list-restaurants.firsty {
+        margin-top: 5px !important;
+    }
+}
+
+.menu-list {
+    padding: 0;
+
+    .menu-header {
+        .menu-cat-img {
+            // max-height: 100px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .menu-cat-texts {
+            text-align: left;
+            background: var(--ion-color-primary);
+
+            h2 {
+                font-family: 'Poppins-Bold';
+                color: var(--ion-color-light);
+                font-size: 16px;
+                font-weight: 700;
+                padding: 0px 10px;
+                // border-bottom: 1px solid var(--ion-color-medium);
+                display: inline-block;
+                // margin: 20px 0 5px 0;
+            }
+
+            p {
+                font-size: 13px;
+                padding: 0 16px !important;
+                margin: 0 0 16px 0;
+                color: var(--ion-color-medium);
+            }
+        }
+    }
+
+    ion-item.menus {
+        margin: 6px;
+        padding: 10px;
+        font-size: 14px;
+        color: var(--ion-color-secondary);
+        --min-height: 50px;
+        --border-color: transparent;
+        --background-activated: none !important;
+
+        .menu-content {
+            position: relative;
+            width: 100%;
+
+            .menu-add-click {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            h2 {
+                font-size: 15px;
+                font-weight: bold;
+
+                i {
+                    margin-left: 5px;
+                    font-size: 14px;
+                    color: var(--ion-color-medium);
+                }
+
+                .allergens-text {
+                    margin: 0 0 0 10px;
+                    font-size: 11px;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    color: var(--ion-color-medium);
+                }
+            }
+
+            .default-text {
+                font-size: 13px;
+            }
+
+            ul {
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: none;
+                    line-height: 22px;
+                    font-size: 14px;
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        left: -16px;
+                        top: 0;
+                        content: '\f054';
+                        font-family: "Font Awesome 5 Pro";
+                    }
+                }
+
+            }
+
+            .menu-meal-type {
+                font-style: italic;
+                margin: 0;
+            }
+
+            .menu-price-text {
+                font-size: 14px;
+                font-weight: bold;
+                color: var(--ion-color-primary);
+                margin: 5px 0;
+                display: inline-block
+            }
+
+            .menu-ex_price-text {
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.reviews-zone {
+    .reviews {
+        margin-bottom: 0 !important;
+
+        ion-item {
+            --color: var(--ion-color-secondary);
+            margin-bottom: 30px;
+
+            ion-avatar {
+                height: 40px;
+                width: 40px;
+            }
+
+            .review-stars {
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                i {
+                    font-size: 12px;
+                    color: var(--ion-color-medium);
+                }
+
+                i.checking {
+                    color: var(--ion-color-primary);
+                }
+
+            }
+
+            h2 {
+                font-size: 14px;
+                font-family: 'Poppins-Bold' !important;
+
+
+            }
+
+            h3 {
+                font-size: 11px;
+                color: var(--ion-color-medium);
+            }
+
+            p {
+                white-space: normal;
+                color: var(--ion-color-secondary);
+                font-size: 12px;
+            }
+
+            ion-label {
+                margin: 0px !important;
+            }
+        }
+    }
+
+    .reply-zone {
+        text-align: center;
+        margin: 0 0 40px;
+        
+
+        .reply-review {
+            margin: 0px auto;
+        }
+    }
+}
+
+.favorites-zone {
+    .favorites {
+        ion-item-sliding {
+            border-bottom: 1px solid var(--ion-color-grabe);
+            margin-bottom: 10px;
+            margin-left: 10px;
+
+            .restaurant-image {
+                img {
+                    width: 120px;
+                     height: 80px;
+                    position: relative;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin: 5px;
+                    display: inline;
+                }
+            }
+
+            
+            ion-label {
+                overflow: visible !important;
+                padding-top: 0px !important;
+
+            }
+
+            .restaurant-reviews {
+                text-align: left;
+                font-size: 14px;
+                color: var(--ion-color-medium);
+
+                i {
+                    color: var(--ion-color-danger);
+                    margin: 0 5px;
+                }
+
+                .review-counts {}
+            }
+
+            h2 {
+                font-size: 12px;
+                font-family: 'Poppins-Bold' !important;
+            }
+        }
+
+
+    }
+}
+
+.favorites-zone-kab {
+    .favorites {
+        ion-item-sliding {
+            border-bottom: 1px solid var(--ion-color-grabe);
+            margin-bottom: 10px;
+            margin-left: 10px;
+
+            .restaurant-image {
+                img {
+                    width: 120px;
+                    // height: 80px;
+                    position: relative;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin: 5px;
+                    display: inline;
+                }
+            }
+
+            
+            ion-label {
+                overflow: visible !important;
+                padding-top: 0px !important;
+
+            }
+
+            .restaurant-reviews {
+                text-align: left;
+                font-size: 14px;
+                color: var(--ion-color-medium);
+
+                i {
+                    color: var(--ion-color-danger);
+                    margin: 0 5px;
+                }
+
+                .review-counts {}
+            }
+
+            h2 {
+                font-size: 12px;
+                font-family: 'Poppins-Bold' !important;
+            }
+        }
+
+
+    }
+}
+
+.meal-types {
+    white-space: nowrap;
+
+    ul {
+        white-space: nowrap;
+        overflow: scroll;
+        padding: 10px 0;
+
+        li {
+            display: inline-block;
+            width: 70px;
+            border-radius: 50%;
+            margin: 0px 10px;
+            text-align: center;
+
+            a {
+                display: block;
+
+                img {
+                    width: 100% !important;
+                }
+            }
+
+            span {
+                font-size: 10px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+.restaurant-info-slider {}
+
+
+ion-list {
+    margin-bottom: 0 !important;
+}
+
+.sort-list {
+    position: relative;
+    height: 44px;
+    margin-bottom: 20px;
+    background: var(--ion-color-light);
+
+    ion-item {
+        --background: var(--ion-color-primary);
+        --background-activated: var(--ion-color-secondary);
+        --border-radius: 20px;
+        --border-width: 1px;
+        --border-color: var(--ion-color-light);
+        --border-radius: 23px;
+        --border-style: solid;
+        --color: var(--ion-color-light);
+        border-radius: 23px;
+        overflow: visible;
+        margin: 0px auto;
+        --padding-start: 10px !important;
+        --inner-border-width: 0px !important;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 16px !important;
+        width: auto;
+
+        ion-label {
+            position: relative;
+            padding-right: 7px;
+            font-size: 11px !important;
+
+            &:before {
+                position: absolute;
+                right: 0;
+                content: ':' !important;
+            }
+        }
+
+        ion-select {
+            max-width: 80%;
+            padding-left: 5px;
+            color: var(--ion-color-light);
+
+            .select-icon {
+                width: auto;
+
+                .select-icon-inner {
+                    display: none
+                }
+            }
+
+            .select-icon:before {
+                content: '\f107';
+                font-family: "Font Awesome 5 Pro";
+                position: relative;
+                font-size: 24px;
+                margin-left: 10px;
+                color: var(--ion-color-primary);
+                border-left: 1px solid var(--ion-color-primary);
+                padding-left: 10px;
+
+            }
+
+            .select-text {
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--ion-color-grabe);
+                    z-index: 2;
+                    content: '';
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.restaurant-map {
+    .map {
+        position: relative !important;
+        width: 100%;
+        height: 150px;
+    }
+}
+
+.fullmap {
+    position: relative !important;
+    width: 100%;
+        height: 380px;
+}
+
+.share-buttons {
+    .action-sheet-container {
+        width: 100%;
+
+        .action-sheet-group {
+            .action-sheet-button {
+                width: 20%;
+                height: 60px;
+                padding: 0 !important;
+                margin: 2.5% !important;
+                text-align: center !important;
+                font-family: "Font Awesome 5 Brands";
+                font-size: 36px;
+                background-image: none !important;
+
+                span {
+                    display: none;
+
+                    &:before {
+                        content: none !important;
+                    }
+                }
+
+                &:before {
+                    font-family: "Font Awesome 5 Brands";
+                }
+            }
+
+            .action-sheet-button:nth-child(2) {
+                &:before {
+                    content: '\f40c' !important;
+                    color: #00b126;
+                }
+            }
+
+            .action-sheet-button:nth-child(3) {
+                &:before {
+                    content: '\f082' !important;
+                    color: #3e5996;
+                }
+            }
+
+            .action-sheet-button:nth-child(4) {
+                &:before {
+                    content: '\f39f' !important;
+                    color: #2583fb;
+                }
+            }
+
+            .action-sheet-button:nth-child(5) {
+                &:before {
+                    content: '\f0d4' !important;
+                    color: #de463d;
+                }
+            }
+
+            .action-sheet-button:nth-child(6) {
+                &:before {
+                    content: '\f081' !important;
+                    color: #59aceb;
+                }
+            }
+
+            .action-sheet-button:nth-child(7) {
+                &:before {
+                    content: '\f08c' !important;
+                    color: #59aceb;
+                }
+            }
+
+            .action-sheet-button:nth-child(8) {
+                &:before {
+                    content: '\f0d3' !important;
+                    color: #be0021;
+                }
+            }
+
+            .action-sheet-button:nth-child(9) {
+                &:before {
+                    font-family: "Font Awesome 5 Pro";
+                    content: '\f0e0' !important;
+                    color: #2964fa;
+                }
+            }
+
+        }
+    }
+}
+
+
+/* Toast Style */
+.dark-toast {
+    --background: var(--ion-color-dark);
+    --color: var(--ion-color-light);
+}
+
+/* General Custom Styles */
+.close-icon {
+    color: var(--ion-color-light);
+    font-size: 24px;
+}
+
+// Filter Page 
+.range-slider .range-knob-handle .range-pin {
+    transform: translate3d(0, 0px, 0) scale(1) !important;
+}
+
+.range-pin:after {
+    content: " €";
+}
+
+.filter-page-form {
+    border-radius: 16px;
+    border: 1px solid var(--ion-color-grabe);
+
+    ion-item {
+        margin-bottom: 20px;
+    }
+
+    .custom-range-item {
+        --background: none !important;
+
+        .custom-range {
+            --bar-height: .1rem !important;
+            margin-top: 20px;
+        }
+    }
+}
+
+// Addresses Page (List, Edit, Create)
+.address-list {
+    ion-list {
+        margin: 0 !important;
+
+        ion-list-header {
+            margin-top: 28px;
+            background: var(--ion-color-grabe);
+            min-height: 50px;
+        }
+
+        ion-item {
+            .address-icon {
+                padding: 15px;
+                display: inline-block;
+                font-size: 22px;
+                color: var(--ion-color-primary);
+            }
+        }
+
+        .new-address-zone {
+            text-align: center !important;
+
+            p {
+                padding: 20px;
+            }
+
+            .circle-button {
+                --border-radius: 50% !important;
+                height: 50px;
+                width: 50px;
+
+                i {
+                    font-size: 30px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+
+.add-address-page {
+    text-align: center;
+
+    ion-button {
+        margin: 20px auto !important;
+    }
+}
+
+
+/* Restaurant Detail Page */
+.restaurant-menu-list {
+    .menus {
+        padding: 0 16px;
+
+        ion-item {
+            font-size: 15px;
+            color: var(--ion-color-tertiary);
+
+            ion-label {}
+
+            .menu-amount {}
+        }
+    }
+}
+
+/* Menu Select Page */
+.menu-page {
+    .menu-list {
+        ion-item.menus {
+            border-bottom: 1px solid var(--ion-color-grabe);
+
+            .menu-image {
+                width: 120px;
+
+                img {
+                    width: 100% !important;
+                }
+            }
+
+            .menu-content {
+                h2 {
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        :last-child {
+            border: 0 !important;
+        }
+    }
+}
+
+.hidden-content {
+    display: none;
+    height: 0;
+
+    ion-list {
+        background: none !important;
+
+        ion-item {
+            --background: none !important;
+            font-size: 14px;
+            --inner-border-width: 0 !important;
+
+            .item-inner {
+                --inner-border-width: 0 !important;
+            }
+
+            .select-icon-inner {
+                left: 0 !important;
+            }
+
+            ion-label {
+                .checkbox-price {
+                    float: right;
+                    color: var(--ion-color-medium);
+                }
+            }
+
+            ion-checkbox {
+                height: 18px;
+                width: 18px;
+            }
+        }
+
+        .ion-select-box {
+            border: 1px solid var(--ion-color-medium);
+            border-radius: 4px;
+            padding: 0 5px !important;
+
+            .select-text {
+                float: right;
+            }
+
+            ion-select {
+                display: inherit;
+                max-width: 100%;
+
+                .select-icon {
+                    left: -10px;
+                    position: relative;
+
+                    .select-icon-inner {
+                        left: 0 !important;
+                    }
+                }
+
+                .select-price {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+.hidden-content.section-active {
+    display: block;
+    transition: all .3s ease-in-out 0s;
+    height: auto !important;
+    background: var(--ion-color-grabe) !important;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+.blank-header {
+    --background: transparent !important;
+
+    ion-toolbar {
+        --background: transparent !important;
+
+        .toolbar-background,
+        .toolbar-container {
+            --background: transparent !important;
+
+        }
+
+    }
+}
+
+
+
+
+/* Profile Page */
+ion-content.profile-page {
+    .profile-page-content {
+        height: 100%;
+    }
+
+    .profile-edit-button {
+        float: right;
+        margin: 10px;
+    }
+
+    .profile-header {
+        text-align: center;
+        position: relative;
+        margin-top: -50px;
+        z-index: 2;
+
+        img {
+            width: 100px;
+            border-radius: 100%;
+            margin: 0px auto;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        h3 {
+            font-size: 16px;
+            margin: 0;
+
+            i {
+                font-size: 14px;
+                color: var(--ion-color-success-shade);
+                margin: 0px 5px;
+            }
+        }
+
+        p {
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: var(--ion-color-medium);
+            margin: 5px;
+        }
+    }
+
+    .profile-content {
+        margin: 16px;
+        display: block;
+        background: var(--ion-color-light);
+        border-radius: 6px;
+        border: 5px solid var(--ion-color-primary);
+        position: relative;
+        left: 0;
+        right: 0;
+        padding: 5px;
+
+        ion-row.profile-info {
+            text-align: center;
+            margin: 5px 0;
+
+            ion-col {
+                .bigs {
+                    color: var(--ion-color-secondary);
+                    background: var(--ion-color-light);
+                    border-radius: 6px;
+                    margin: 10px;
+
+                    .big-text {
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 30px;
+                    }
+
+                    .big-text-desc {
+                        font-size: 11px;
+                        line-height: 12px;
+                        padding-bottom: 5px;
+                    }
+
+                    i {
+                        font-size: 24px;
+                        color: var(--ion-color-primary);
+
+                    }
+                }
+            }
+        }
+
+        .user-menu {
+            font-size: 12px;
+            background: none !important;
+            margin: 10px;
+
+            ion-item {
+                --background: none !important;
+                --inner-border-width: 0;
+                color: var(--ion-color-secondary);
+
+            }
+        }
+    }
+}
+
+/* Profile Page */
+ion-content.profile-page1 {
+    .profile-page-content {
+        height: 100%;
+    }
+
+    .profile-edit-button {
+        float: right;
+        margin: 10px;
+    }
+
+    .profile-header {
+        text-align: center;
+        position: relative;
+        margin-top: -50px;
+        z-index: 2;
+
+        img {
+            width: 100px;
+            border-radius: 100%;
+            margin: 0px auto;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        h3 {
+            font-size: 16px;
+            margin: 0;
+
+            i {
+                font-size: 14px;
+                color: var(--ion-color-success-shade);
+                margin: 0px 5px;
+            }
+        }
+
+        p {
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: var(--ion-color-medium);
+            margin: 5px;
+        }
+    }
+
+    .profile-content {
+        margin: 16px;
+        display: block;
+        background: var(--ion-color-grabe);
+        border-radius: 12px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        padding: 5px;
+
+        ion-row.profile-info {
+            text-align: center;
+            margin: 5px 0;
+
+            ion-col {
+                .bigs {
+                    color: var(--ion-color-secondary);
+                    background: var(--ion-color-light);
+                    border-radius: 6px;
+                    margin: 10px;
+
+                    .big-text {
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 30px;
+                    }
+
+                    .big-text-desc {
+                        font-size: 11px;
+                        line-height: 12px;
+                        padding-bottom: 5px;
+                    }
+
+                    i {
+                        font-size: 24px;
+                        color: var(--ion-color-primary);
+
+                    }
+                }
+            }
+        }
+
+        .user-menu {
+            background: none !important;
+            margin: 10px;
+
+            ion-item {
+                --background: none !important;
+                --inner-border-width: 0;
+
+            }
+        }
+    }
+}
+
+ion-content.profile-page2 {
+    .profile-page-content {
+        height: 100%;
+    }
+
+    .profile-edit-button {
+        float: right;
+        margin: 10px;
+    }
+
+    .profile-header {
+        text-align: center;
+        position: relative;
+        margin-top: 0px;
+        z-index: 2;
+
+        img {
+            width: 100px;
+            border-radius: 100%;
+            margin: 0px auto;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        h3 {
+            font-size: 16px;
+            margin: 0;
+
+            i {
+                font-size: 14px;
+                color: var(--ion-color-success-shade);
+                margin: 0px 5px;
+            }
+        }
+
+        p {
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: var(--ion-color-medium);
+            margin: 5px;
+        }
+    }
+
+    .profile-content {
+        // margin: 16px;
+        display: block;
+        // background: var(--ion-color-grabe);
+         background: -webkit-linear-gradient(50deg,#8cc53f,#d5de23);
+        // border-radius: 12px;
+        position: absolute;
+        // top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        padding: 5px;
+
+        ion-row.profile-info {
+            text-align: center;
+            margin: 5px 0;
+
+            ion-col {
+                .bigs {
+                    color: var(--ion-color-secondary);
+                    background: var(--ion-color-light);
+                    border-radius: 6px;
+                    margin: 10px;
+
+                    .big-text {
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 30px;
+                    }
+
+                    .big-text-desc {
+                        font-size: 11px;
+                        line-height: 12px;
+                        padding-bottom: 5px;
+                    }
+
+                    i {
+                        font-size: 24px;
+                        color: var(--ion-color-primary);
+
+                    }
+                }
+            }
+        }
+
+        .user-menu {
+            background: none !important;
+            margin: 10px;
+
+            ion-item {
+                --background: none !important;
+                --inner-border-width: 0;
+
+            }
+        }
+    }
+}
+
+
+// .item-detail-icon {
+//     display: none !important;
+//     width: 0 !important;
+//     height: 0 !important;
+// }
+
+/* My Orders Page */
+.myorders-page {
+    ion-card {
+        padding: 10px;
+        margin: 10px 16px !important;
+
+        .order-header {
+            img {
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                border-radius: 100%;
+            }
+
+            h2 {
+                display: inline-block;
+                margin: 15px 0 0 10px;
+                vertical-align: top;
+                font-size: 18px;
+
+                i {
+                    margin-right: 10px;
+                    color: var(--ion-color-primary);
+                }
+            }
+        }
+
+        .order-info {
+            .order-date {}
+
+            .order-price {
+                text-align: right;
+                font-weight: 700;
+                color: var(--ion-color-primary);
+            }
+        }
+
+        .order-content {}
+
+        .order-actions {
+            .order-comment {
+                text-align: right;
+
+                .review-make {
+                    i {
+                        margin-left: 7px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/* Order Review Page */
+.order_comment {
+    text-align: center;
+
+    .review-zone {
+        text-align: center;
+
+        .order-header {
+            .restaurant-avatar {
+                margin: 10px auto;
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            h2 {
+                display: block;
+                width: 100%;
+                margin: 0 0 10px 0;
+
+                i {
+                    margin-right: 10px;
+                    color: var(--ion-color-primary);
+                }
+            }
+
+            .order-type {
+                color: var(--ion-color-primary);
+            }
+        }
+    }
+
+    .orders-info {
+        .order-data-info {
+            color: var(--ion-color-medium);
+        }
+    }
+
+    .order-data-extras {
+        font-size: 13px;
+        padding: 0px 20px;
+        color: var(--ion-color-medium);
+    }
+
+    .reviews-box {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        background: var(--ion-color-grabe);
+        padding: 16px;
+
+        .ratings {
+            padding: 10px 16px 0 16px !important;
+        }
+
+        .review-action {
+            padding-bottom: 16px;
+
+            .card-title {
+                font-size: 15px;
+                font-weight: 600;
+
+                i {
+                    color: var(--ion-color-primary);
+                    margin-right: 5px;
+                }
+            }
+
+            i {}
+
+            .rating_slide {}
+        }
+    }
+
+    .comment-write {
+        textarea {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+        }
+    }
+
+    .order-comment-buttons {
+        ion-button {}
+    }
+}
+
+
+/* Coupon & Invıte Page Components */
+.no-coupons {
+    text-align: center;
+    padding-top: 20px;
+
+    .no-coupon-title {
+        font-size: 17px;
+        padding: 0 20px;
+        color: var(--ion-color-secondary);
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .no-coupon-text {
+        background: var(--ion-color-grabe);
+        border-top: 2px solid var(--ion-color-primary);
+        border-bottom: 2px solid var(--ion-color-primary);
+        color: var(--ion-color-secondary);
+        padding: 15px 30px 0 30px;
+        margin: 15px 0;
+        font-size: 14px;
+
+        .coupon-price {
+            font-size: 30px;
+            margin-top: 5px;
+        }
+    }
+
+    button {
+        margin: 20px 0 10px 0 !important;
+    }
+}
+
+.current-coupon {
+    .list-header {
+        color: var(--ion-color-secondary);
+        margin: 16px 6px 6px 16px;
+        font-weight: bold;
+    }
+
+    .coupon-loop {
+        margin-bottom: 5px;
+
+        ion-item {
+            --background: var(--ion-color-grabe);
+            --min-height: 50px;
+            --inner-padding-end: 0;
+            --inner-border-width: 0 !important;
+        }
+    }
+
+
+
+    .coupon-price {
+        .price-zone {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-left: 16px;
+        }
+
+        i {
+            color: var(--ion-color-primary);
+            margin-right: 5px;
+        }
+    }
+
+    .active-coupons {
+        padding: 0;
+        margin: 0;
+        width: 33.3333%;
+        height: 50px;
+        float: left;
+    }
+
+    .coupon-code {
+        .code-zone {
+            position: absolute;
+            top: 5px;
+        }
+
+        .code-middle {
+            display: list-item;
+            float: left;
+            position: absolute;
+            bottom: 5px;
+            font-size: 13px;
+            color: var(--ion-color-medium);
+            list-style: none;
+        }
+    }
+
+    .coupon-date {
+        float: right;
+        text-align: right;
+        color: var(--ion-color-dark-tint);
+
+        .coupon-date-zone {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+    }
+
+    ion-item.item-radio-checked * {
+        font-weight: 700 !important;
+    }
+
+    ion-input {
+        color: var(--ion-color-secondary);
+    }
+
+    button {
+        position: relative;
+        right: 0;
+        margin: 0;
+        padding: 16px 20px !important;
+        height: auto;
+        border-left: 1px solid var(--ion-color-grabe) !important;
+        background: var(--ion-color-medium) !important;
+        font-size: 16px !important;
+    }
+
+}
+
+.add-coupon-number {
+    position: relative;
+    margin: 0 16px;
+
+    ion-item {
+        position: relative;
+
+        input {}
+    }
+
+    ion-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0px;
+        margin: 0;
+        padding: 0;
+        z-index: 9;
+    }
+}
+
+ion-row.invite-lists {
+    background: var(--ion-color-light);
+    position: relative;
+    padding-left: 50px;
+    border-bottom: 1px solid var(--ion-color-grabe);
+    border-top: 1px solid var(--ion-color-grabe);
+    margin-bottom: 10px;
+
+    i {
+        font-size: 22px;
+        color: var(--ion-color-primary);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 15px;
+    }
+
+    .invite-text-zone {
+        padding: 5px;
+
+        .invite-title {
+            font-size: 18px;
+            color: var(--ion-color-secondary);
+        }
+
+        .invite-steps {
+            margin: 5px 0;
+            position: relative;
+            padding-left: 40px;
+            line-height: 24px;
+            color: var(--ion-color-medium);
+
+            .steps-number {
+                background: #c7c7cc;
+                color: #ffffff;
+                border-radius: 15px;
+                padding: 0px 8px;
+                position: absolute;
+                min-width: 36px;
+                text-align: center;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 12px;
+                line-height: 16px;
+
+            }
+
+            .steps-active {
+                background: var(--ion-color-dark) !important;
+            }
+        }
+    }
+}
+
+.full i {
+    color: var(--ion-color-dark) !important;
+}
+
+
+ion-alert.pop-style {
+    .alert-wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) !important;
+        padding: 0;
+        margin: 0;
+        width: 330px !important;
+        max-width: 330px !important;
+        background: var(--ion-color-grabe);
+
+        .alert-head {
+            font-size: 20px;
+            background: var(--ion-color-light);
+            padding: 15px 0 !important;
+
+            h2 {
+                text-transform: inherit !important;
+            }
+        }
+
+        .alert-message {
+            padding: 10px 0 10px 10px !important;
+            max-height: 300px !important;
+
+            .popup-container {
+                .coloum-text {
+                    padding: 20px;
+                    font-size: 16px;
+                    text-align: center;
+                }
+
+                .coloum {
+                    position: relative;
+                    display: block;
+                    margin-bottom: 10px;
+                    padding: 10px 0 10px 48px;
+                    text-align: left;
+
+                    .pop-badged {
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 2px solid var(--ion-color-secondary);
+                        color: var(--ion-color-secondary);
+                        line-height: 40px;
+                        text-align: center;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        margin: 0 !important;
+                        font-size: 20px;
+                    }
+
+                    .big-text {
+                        font-size: 16px;
+                        color: var(--ion-color-secondary);
+                        display: block;
+                    }
+
+                    span {}
+
+                    .pop-middle {}
+                }
+
+                .coloum:last-child {
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        .alert-button-group {
+            button {
+                background: var(--ion-color-primary);
+                color: var(--ion-color-light);
+                height: auto;
+                padding: 16px;
+            }
+        }
+    }
+}
+
+.addtocart {
+    i {
+        font-size: 24px;
+        margin-right: 10px;
+        ion-badge {
+            font-size: 12px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+
+
+/* Cart Page */
+.vat-list-container {
+    .vat-items {
+        border-bottom: 1px solid var(--ion-color-grabe);
+        margin-bottom: 10px;        
+        .header {
+            margin-bottom: 5px;
+            h3 {
+                display: inline;
+                font-size: 18px;
+                font-weight: bold;
+                .vat-price {
+                    float: right;
+                    font-size: 17px;
+                    font-weight: bold;
+                    color: var(--ion-color-secondary);
+                }
+            }
+            ul {
+                --padding-start: 0 !important;
+                padding-inline-start: 0px;
+                margin-block-end: 0;
+                li {
+                    list-style: none;
+                    line-height: 32px;
+                    color: var(--ion-color-medium);
+                    .sub-vat-price {
+                        float: right;
+                        font-size: 16px;
+                        font-weight: normal;
+                        color: var(--ion-color-secondary);
+                    }
+
+                }
+            }
+            .amount {
+                display: block;
+                text-align: right;
+                i {
+                    font-size: 14px;
+                    color: var(--ion-color-medium);
+                    &:first-child {
+                        margin-right: 5px;
+                    }
+                    &:last-child {
+                        margin-left: 5px;
+                    }
+
+                }
+            }
+        }
+        &:last-child {
+            border-color: var(--ion-color-medium);
+        }
+    .ex-vat-price {
+        margin-right: 16px;
+        text-decoration: line-through;
+        color: var(--ion-color-medium);
+    }        
+    }
+
+
+
+    .calc {
+        ul {
+            --padding-start: 0 !important;
+            padding-inline-start: 0px;
+            font-size: 18px !important;
+            font-weight: bold;
+
+            li {
+                list-style: none;
+                line-height: 44px;
+                color: var(--ion-color-secondary);
+                border-bottom: 1px solid var(--ion-color-grabe);
+                .sub-vat-price {
+                    float: right;
+                }
+
+            }
+            .feeds {
+                color: var(--ion-color-primary-tint);
+            }
+            .total {
+                color: var(--ion-color-success-shade);
+            }
+        }
+    }
+
+}
+
+
+
+
+/* CheckOut Page */
+.payment-zone {
+    font-size: 15px !important;
+    margin-bottom: 20px !important;
+
+    .address-zone {
+        padding: 0 !important;
+        ion-button {
+            right: 5px;
+        }
+    }
+    ion-list-header {
+        padding-inline-start: 0 !important;
+        .list-header-button {
+            position: absolute;
+            right: -10px;
+            top: 3px;
+        }
+    }
+    ion-radio-group {
+        margin-bottom: 20px;
+        display: block;
+        padding: 0px;
+        border: 1px solid var(--ion-color-grabe);
+        border-radius: 10px;
+        overflow: hidden;
+        ion-item {
+            --border-color: var(--ion-color-grabe) !important;
+        }
+    }
+
+    ion-radio {
+        margin-left: 10px;
+        button {
+            --border-color: var(--ion-color-grabe) !important;
+            border-color: var(--ion-color-grabe) !important;
+
+        }
+    }
+
+}
+
+.item.sc-ion-label-ios-h, .item .sc-ion-label-ios-h {
+    margin: 0;
+    position: relative;
+    font-size: 15px;
+    color: var(--ion-color-medium);    
+    .radio-right {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 75%;
+        width: 40px;
+        img {
+            height: 80% !important;
+            float: right;
+        }
+    }
+}
+
+.privacy-policy {
+    font-size: 14px !important;
+    margin-bottom: 16px;
+    ion-checkbox {
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        margin-right: 7px;
+        float: left;
+        svg {
+            display: none !important;
+        }
+    }
+    span {
+        color: var(--ion-color-primary);
+    }
+}
+
+/* Add Cart Page */
+.card-page {
+    .add-card-content {
+        border-radius: 8px;
+        padding: 10px 16px;
+        ion-item{
+            --background: none !important;
+            i {
+                min-width: 30px;
+                text-align: center;
+                color: var(--ion-color-primary);
+                font-size: 14px;
+            }
+
+        }
+        ion-item.full-input {
+            ion-input {
+                margin-left: 10px;
+            }
+        }
+        .input-group {
+
+            .card-date {
+                ion-col {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            ion-input {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+        .privacy-policy {
+            margin-top: 20px;
+        }
+        .save-action {
+            text-align: center;
+            ion-button {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/* Support Page */
+.support-page {
+
+
+    .topics {
+        h3 {
+            font-size: 12px;
+            text-align: center;
+            color: var(--ion-color-dark);
+        }
+        ion-row {
+            ion-col {
+                // margin-bottom: 16px;
+                text-align: center;
+                i {
+                    font-size: 20px;
+                    color: var(--ion-color-primary);
+                    background: var(--ion-color-grabe);
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 100%;
+                    line-height: 60px;
+                }
+                p {
+                    color: var(--ion-color-medium);
+                    font-size: 11px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+    .accordion {
+        width:100%;
+        background: var(--ion-color-light);
+        padding: 10px;
+        ul {
+            list-style:none;
+            margin:0;
+            padding:0;   
+            li {
+                margin:0;
+                padding:0;
+                label {
+                    display:block;
+                    font-size:15px;
+                    line-height:24px;
+                    color: var(--ion-color-secondary);
+                    font-weight:700;
+                    transition: all .2s ease-out;
+                }  
+                .content {
+                    padding:0 10px;
+                    font-size: 14px;
+                    overflow:auto;
+                    transition: all .5s ease-out;
+                    p {
+                        color:  var(--ion-color-medium);
+                        margin:0 0 10px;
+                        padding: 10px;     
+                    }
+                }              
+            }         
+        }
+    }
+    
+    .accordion * {
+        transition: all .5s ease-out;
+    }
+
+
+    .accordion [type=radio], .accordion [type=checkbox] {
+        display:none;
+    }
+
+
+    
+    
+    /* Vertical */
+    .vertical ul li {
+        overflow:hidden;
+        margin:0 0 1px;
+    }
+    .vertical ul li label {
+        padding:10px;
+    }
+    .vertical [type=radio]:checked ~ label, .vertical [type=checkbox]:checked ~ label {
+        border-bottom:0;
+        color: var(--ion-color-dark);
+    }
+    
+    .vertical ul li .content {
+        height:0px;
+        border-top:0;
+    }
+    .vertical [type=radio]:checked ~ label ~ .content, .vertical [type=checkbox]:checked ~ label ~ .content {
+        height:100px;
+    }
+
+    .copright-zone {
+        text-align: center !important;
+        .socials-links {
+            padding-inline-start:0;
+            li {
+                display: inline-block;
+                i {
+                    font-size: 28px;
+                    margin: 10px;
+                }
+            }
+        }
+        .copright-content {
+            font-size: 13px;
+            color: var(--ion-color-secondary);
+            padding: 10px 20px;
+        }
+        .copright-text {
+            font-size: 11px;
+            color: var(--ion-color-medium);
+        }
+    }
+}
+.my-custom-class {
+    --background: rgb(255, 255, 255);
+    --spinner-color: green;
+  
+    color: green;
+  }
+  /* DOES NOT WORK - not specific enough */
+ion-loading {
+    color: green;
+  }
+  
+  /* Works - pass "my-custom-class" in cssClass to increase specificity */
+  .my-custom-class {
+    color: green;
+  }
+  .scale-down-center {
+    -webkit-animation: scale-down-center 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite alternate both;
+            animation: scale-down-center 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite alternate both;
+            background: transparent;
+            box-shadow: none;
+ }
+ /* Custom Skeleton Line Height and Margin */
+.custom-skeleton ion-skeleton-text {
+    line-height: 13px;
+  }
+  
+  .custom-skeleton ion-skeleton-text:last-child {
+    margin-bottom: 5px;
+  }
+
+.button-judul
+{
+    background: -webkit-linear-gradient(50deg,#8dc63e,#d4dd24);
+    width: 60%;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+}
+

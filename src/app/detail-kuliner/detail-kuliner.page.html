@@ -1,0 +1,116 @@
+<ion-content class="profile-page standard-page" [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Segarkan..."></ion-refresher-content>
+  </ion-refresher>
+  <ion-list class="menu-list">
+    <div class="menu-header" >
+        <div class="menu-cat-img">
+          <div class="menu-image">
+            <ion-thumbnail style="height: 200px; width: 100%;">
+              <img *ngIf="detail?.thumbnail != null" src="{{path?.kuliner}}{{detail?.thumbnail}}" alt="">
+            </ion-thumbnail>
+          </div>
+            <span class="notify-badge"><ion-back-button defaultHref="/"></ion-back-button></span>
+        </div>
+
+        <h1 class="big-title">{{ detail?.title }}</h1>
+    </div>
+    <div class="standard-page">
+      <ion-item class="restaurant-actions" lines="none">
+        <ion-buttons class="actions-buttons" slot="start">
+          <ion-button *ngIf="!fav" (click)="presentToastSave(detail)"><i class="far fa-heart"></i></ion-button>
+          <ion-button *ngIf="fav" (click)="presentToastRemove(detail)"><i class="fas fa-heart"></i></ion-button>
+          <!-- <ion-button (click)="presentToastRemove(detail)"><i class="fas fa-thumbs-up"></i></ion-button> -->
+          <ion-chip (click)="getLike(detail?.id)">
+            <ion-icon name="thumbs-up" color="primary"></ion-icon>
+            <ion-label>{{ like }} Suka</ion-label>
+          </ion-chip>
+          <ion-chip>
+            <ion-icon name="eye" color="primary"></ion-icon>
+            <ion-label>{{ dilihat }} dilihat</ion-label>
+          </ion-chip>
+        </ion-buttons>
+      </ion-item>
+      </div>
+      <!-- <div class="standard-page">
+        <ion-item class="restaurant-actions" lines="none">
+        <ion-button (click)=arah(detail?.latitude,detail?.longitude) class="contact-button" slot="start">
+          <i class="fas fa-route"></i> 
+          Rute
+        </ion-button>
+      </ion-item>
+      </div>
+      <div class="restaurant-map">
+        <h1>Lokasi</h1>
+        <div #mapElement class="map"></div>        
+      </div> -->
+    <div *ngIf="gambar" class="trends">
+      <h1>Galeri</h1>
+      <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide *ngFor="let item of gambar">
+  
+          <div class="menu-image">
+            <ion-thumbnail style="height: 160px; width: 100%;">
+            <img src="{{ path?.gambar_kuline }}{{item.gambar}}" alt="">
+            </ion-thumbnail> 
+          </div>
+        </ion-slide>
+      </ion-slides>
+      </div>
+    <div class="info-list">
+      <h1>Data Kuliner</h1>
+      <ion-row class="">
+        <ion-chip>
+          <ion-icon *ngIf="detail?.title != null" name="remove-circle" color="primary"></ion-icon>
+          <ion-label>Nama : {{ detail?.title }}</ion-label>
+        </ion-chip>
+      </ion-row>
+    </div>
+    <div class="info-list" *ngIf="penyedia?.length > 0">
+      <h1>Penyedia Jasa</h1>
+      <ion-row *ngFor="let item of penyedia" [routerLink]="'/detailsingleekraf/'+ item?.id">
+        <ion-chip  >
+          <ion-icon name="remove-circle" color="primary"></ion-icon>
+          <ion-label>Nama : {{ item?.nama_ekraf }}</ion-label>
+        </ion-chip>
+      </ion-row>
+      
+    </div>
+
+    <div class="opened-time">
+      <h1>Deskripsi</h1>
+      <ion-list padding-horizontal class="menus ion-text-justify" style="font-size: 12px;" [innerHTML]="detail?.isi">
+
+      </ion-list>          
+    </div>  
+    <div class="opened-time" *ngIf="videoData?.length > 0">
+      <h1>Video</h1> 
+      <div *ngFor="let item of videoData">
+        <iframe padding width="100%" height="200" [src]="item" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div> 
+    </div> 
+  </ion-list>
+
+  <div class="favorites-zone reviews-zone">
+    <h1>Kuliner Lainnya</h1>
+    <ion-list class="favorites">
+        <ion-item-sliding *ngFor="let item of terdekat">
+            <ion-item lines="none" [routerLink]="'/detail-kuliner/'+ item?.id" routerDirection="forward">
+              <div class="restaurant-image">
+                <img src="{{path?.kuliner}}{{item.thumbnail}}">
+              </div>                  
+              <ion-label>
+                <h2 class="ion-text-wrap">{{ item.title }}</h2>
+              </ion-label>
+            </ion-item>
+          </ion-item-sliding>
+      </ion-list>  
+  </div>
+
+</ion-content>
+
+

@@ -1,0 +1,68 @@
+
+
+<ion-header class="primary-header light-header">
+    <ion-toolbar color="light">
+      <ion-title slot="start" color="success">Order Review</ion-title>
+      <ion-buttons class="header-icons" slot="end" color="success">
+        <ion-button (click)="closeModal()"><i class="far fa-times"></i></ion-button>
+      </ion-buttons>      
+    </ion-toolbar>
+  </ion-header>
+
+  
+<ion-content class="order_comment">
+    <div class="review-zone">
+      <div class="order-header">
+        <ion-row>
+          <div class="restaurant-avatar">
+            <img src="../../assets/images/restaurants/logo/l-5.jpg">
+          </div>
+          <h2><i class="fas fa-heart"></i>Restaurant Milas</h2>
+        </ion-row>
+        <div class="order-type">
+          DELIVERY
+        </div>
+      </div>
+
+      <ion-row class="orders-info">
+        <ion-col col-4 class="order-data-info">14.12.18 / 22:42</ion-col>
+        <ion-col col-4 class="order-data-info">#10545</ion-col>
+        <ion-col col-4 class="order-data-info">12,90 €</ion-col>
+      </ion-row>
+      <ion-row class="order-data-extras">1x pizza sucuk, 2 x tost kasar, 1 x cola, 1 x sütlac, 1 x pizza
+          sucuk, 3x pizza 4x pizza sucuk, 2 x tost kasar, 1 x cola, 1 x piz...
+      </ion-row> 
+    </div>
+
+
+    <ion-card class="reviews-box ratings">
+
+      <div class="review-action">
+        <div class="card-title">
+          <i class="fal fa-utensils select-icon"></i> Taste
+        </div>
+        <rating class="rating_slide" [rate]="rate" readonly="false" size="default" (rateChange)="onRateChange()">
+        </rating>
+      </div>
+      <div class="review-action">
+        <div class="card-title">
+          <i class="far fa-stopwatch select-icon"></i> Service
+        </div>
+        <rating class="rating_slide" [rate]="rate2" readonly="false" size="default" (rateChange)="onRateChange2()">
+        </rating>
+      </div>
+    </ion-card>
+
+    <ion-card class="reviews-box">
+      <div class="comment-write">
+        <textarea name="history_comment" id="comment15" rows="3" placeholder="Leave a comment ..."></textarea>
+      </div>
+    </ion-card>
+
+    <ion-row class="order-comment-buttons">
+      <ion-col col-6><ion-button class="buttons-outline" expand="block" shape="round" color="medium">Cancel</ion-button>
+      </ion-col>
+      <ion-col col-6><ion-button expand="block" shape="round">Send</ion-button></ion-col>
+    </ion-row>
+
+</ion-content>

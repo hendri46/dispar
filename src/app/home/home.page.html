@@ -1,0 +1,197 @@
+
+<!-- content -->
+
+<ion-content fullscreen>
+  <!-- <img src="assets/imgs/header.svg" class="image-header"> -->
+  <div class="main_content_div">
+    <div class="user_div">
+      <!-- <div class="first_div">
+        <ion-label class="name-apps">JEMARI</ion-label>
+        <ion-label class="detail-apps">Jendela Informasi Pariwisata Riau</ion-label>
+      </div> -->
+      <!-- <div class="user_back" [style.backgroundImage]="'url(assets/imgs/logo.png)'"></div> -->
+
+    </div>
+      <div class="content_div support-page">
+          
+        <!-- <ion-label class="atas">DESTINASI PILIHAN</ion-label> -->
+        <!-- LIST PROMO -->
+        <div class="home destipilihan">
+          <ion-slides pager="true" [options]="slideDestinasi">
+            <ion-slide *ngFor="let itemObjekWisataPilihan of objek_wisata_pilihan">
+              <div class="menu-image">
+                <img src="{{ path['wisata'] }}{{ itemObjekWisataPilihan?.gambar_header }}" [routerLink]="'/detail-wisata/'+ itemObjekWisataPilihan?.id" routerDirection="forward">
+                  <div class="menu-info">
+                    {{ itemObjekWisataPilihan?.nama }}    
+                  </div>
+              </div>
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <!-- END LIST PROMO -->
+        <!-- LIST MENU -->
+        <div class="topics">
+          <div class="address-zone" style="background-color: #d5de23;">
+            <ion-input class="search-icon" style="margin-top: 5px; margin-bottom: 5px;color:black;" [(ngModel)]="searchText" placeholder="CARI APA DI RIAU ?" [routerLink]="'/pencarian/'" routerDirection="forward"></ion-input>
+          </div>
+
+          <ion-row>
+            <ion-col size="4" class="icon-home" [routerLink]="'/list-wisata/'">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/tempat wisata.png">
+                <h3>Objek Wisata</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" [routerLink]="'/hotel/'" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/hotel.png">
+                <h3>Hotel</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" [routerLink]="'/tempat-ibadah/'" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/tempat ibadah.png">
+                <h3>Tempat Ibadah</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" [routerLink]="'/restaurant/'" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/restoran.png">
+                <h3>Restoran</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" [routerLink]="'/list-event/'" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/event.png">
+                <h3>Event</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" [routerLink]="'/list-ekraf/'" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/ekraf.png">
+                <h3>Ekonomi Kreatif</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" [routerLink]="'/desa-wisata/'" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/desawisata.png">
+                <h3>Desa Wisata</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" [routerLink]="'/list-travel/'" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/travel.png">
+                <h3>Travel</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" [routerLink]="'/list-cinderamata/'" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/cindera mata.png">
+                <h3>Cinderamata</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" [routerLink]="'/list-kuliner/'" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/kuliner.png">
+                <h3>Kuliner</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" [routerLink]="'/oleh-oleh'" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/gerai.png">
+                <h3>Gerai Oleh-oleh</h3>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <div class="topics">
+          <ion-row>
+            <ion-col size="12" class="icon-home" [routerLink]="'/list-wisata/'" routerDirection="forward">
+              <h4 class="button-judul">Sosial Media</h4>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4" class="icon-home" (click)="getFacebook()" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/facebook.png">
+                <h3>Facebook</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" (click)="getInstagram()" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/instagram.png">
+                <h3>Instagram</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4" class="icon-home" (click)="getYoutube()" routerDirection="forward">
+              <div class="ion-text-wrap">
+                <img style="height:50px" src="assets/icon/youtube.png">
+                <h3>Youtube</h3>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+        <!-- END LIST MENU -->
+        <!-- LIST IKLAN -->
+        <h4 class="button-judul">Promosi</h4>
+        <div class="">
+          <ion-slides pager="false" [options]="slidePromo">
+            <ion-slide *ngFor="let itemIklan of iklan">
+              
+              <img class="gambar-promosi" src="{{ path['iklan'] }}{{ itemIklan?.gambar_banner }}" (click)="getPromosi(itemIklan?.url)">
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <!-- END LIST IKLAN -->
+        <!-- LIST IKLAN -->
+        <h4 class="button-judul">Event</h4>
+        <div class="">
+          <ion-slides pager="false" [options]="slideEvent">
+            <!-- <ion-slide *ngFor="let item of promosi"> -->
+            <ion-slide *ngFor="let itemEvent of event">
+              
+                <img class="gambar-promosi" src="{{ path['event'] }}{{ itemEvent?.gambar_header }}" [routerLink]="'/detail-event/'+ itemEvent?.id" routerDirection="forward">
+               
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <!-- END LIST IKLAN -->
+        <h4 class="button-judul">Berita Terbaru</h4>
+        <!-- LIST BERITA -->
+        <div class="favorites-zone reviews-zone">
+          <ion-list class="favorites">
+              <ion-item-sliding *ngFor="let itemBerita of berita">
+                  <ion-item lines="none" routerLink="/detail-berita/{{ itemBerita?.id }}">
+                    <div class="restaurant-image">
+                      <img src="{{ path['berita'] }}{{ itemBerita?.thumbnail }}">
+                    </div>                  
+                    <ion-label>
+                      <h2 class="ion-text-wrap">{{ itemBerita['title'] }}</h2>
+                      <div class="ion-text-wrap">
+                      <!-- <h3>{{ itemBerita['meta_description'] }}</h3> -->
+                      </div>
+                      <!-- <div class="restaurant-reviews">
+                        <i class="fas fa-eye"></i> <span class="review-counts">({{ itemBerita?.dilihat }})</span>
+                      </div>                     -->
+                    </ion-label>
+                  </ion-item>
+                </ion-item-sliding>
+            </ion-list>  
+            <div class="reply-zone">
+              <ion-button class="reply-review" [routerLink]="'/tabs/tabs/berita'" shape="round" fill="outline">Selengkapnya</ion-button>
+            </div>  
+        </div>
+      </div>
+      <div class="bg_logo" text-center>
+        <!-- <div class="user_back" [style.backgroundImage]="'url(assets/imgs/riau.png)'" text-center></div> -->
+        <img style="align-items: center;width: 250px;" src="assets/imgs/homeland.png">
+        <ion-label class="nama_dinas">DINAS PARIWISATA</ion-label>
+        <ion-label class="nama_dinas">Pemerintah Provinsi Riau</ion-label>
+       
+      </div>
+  </div>
+
+  <!-- end content -->
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+</ion-content>

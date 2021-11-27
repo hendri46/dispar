@@ -1,0 +1,20 @@
+<ion-header class="primary-header deals-page">
+  <ion-toolbar>
+    <ion-title slot="start">Kategori</ion-title>
+    <ion-buttons >
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="meal-types">
+    <ul>
+      <li *ngFor="let meal of meals" (click)="clickEvent()">
+        <a><img src="{{meal.meals_icon}}" alt=""></a>
+        <span>{{meal.meals_name}}</span>
+      </li>
+    </ul>
+  </div>
+  
+
+</ion-content>

@@ -1,0 +1,76 @@
+<ion-header class="primary-header light-header">
+  <ion-toolbar color="light">
+    <ion-title slot="start" color="success">Checkout Page</ion-title>
+    <ion-buttons class="header-icons" slot="end" color="success">
+      <ion-button (click)="closeModal()"><i class="far fa-times"></i></ion-button>
+    </ion-buttons>      
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+
+  <ion-list class="payment-zone">
+
+    <ion-list-header>
+      DEFINED ADDRESS
+    </ion-list-header>
+
+    <div class="address-zone">
+      <ion-input class="map-address" placeholder="21 Greens Road RD 2 Ruawai 0592" autofocus="false"></ion-input>
+      <ion-button><i class="fas fa-exchange-alt"></i></ion-button>
+    </div>
+
+
+    <ion-list-header>
+      DEFINED PAYMENT
+      <ion-button class="list-header-button" fill="clear" size="small" (click)="openAddCartPage()">ADD CARD</ion-button>
+    </ion-list-header>
+
+      <ion-radio-group>
+        <ion-item class="payments mastercard">
+          <ion-label class="radiopayment">**** **** **78 5642 <span class="radio-right"> <img src="../../assets/images/master-card.svg"></span></ion-label>
+          <ion-radio value="mastercard" slot="start" checked></ion-radio>
+        </ion-item>
+    
+        <ion-item class="payments visa">
+          <ion-label class="radiopayment">**** **** **16 4748 <span class="radio-right"> <img src="../../assets/images/visa.svg"></span></ion-label>
+          <ion-radio value="visa" slot="start"></ion-radio>
+        </ion-item>
+    
+        <ion-item class="payments express">
+          <ion-label class="radiopayment">**** **** **** 9840 18 <span class="radio-right"> <img src="../../assets/images/americanex.svg"></span></ion-label>
+          <ion-radio value="express" slot="start"></ion-radio>
+        </ion-item>
+
+      </ion-radio-group>
+
+      <div class="vat-list-container">      
+          <div class="calc">
+              <ul>
+                <li class="">Total <span class="sub-vat-price"> $48.90</span></li>
+              </ul>
+          </div>
+      
+          <div class="privacy-policy">
+            <ion-checkbox slot="start"></ion-checkbox>
+            I have read and accept the <span (click)="goPrivacyPage()">Privacy Policy</span>
+          </div>
+
+          <ion-row>
+            <ion-col col-12>
+             <ion-button expand="full" shape="round" color="success"><i class="fal fa-cash-register button-left-icon"></i> Go Checkout</ion-button>
+            </ion-col>          
+          </ion-row>
+      
+        </div>
+
+
+    </ion-list>
+
+
+
+</ion-content>
+

@@ -1,0 +1,35 @@
+<ion-header class="primary-header light-header">
+  <ion-toolbar color="light">
+    <ion-title slot="start" color="success">Kontak Kami</ion-title>
+    <ion-buttons class="header-icons" slot="end" color="success">
+      <ion-button (click)="closeModal()"><i class="far fa-times"></i></ion-button>
+    </ion-buttons>      
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="profile-page1">
+  <div class="profile-page-content">
+    <div class="profile-content">
+      <div class="profile-header">
+        <img src="../../assets/images/profile.png" alt="">
+        <!-- <div padding-horizontal class="menus ion-text-justify" style="font-size: 12px; color: white;" [innerHTML]="detail?.tentang_kami"> -->
+          <ion-chip *ngIf="detail?.alamat_kantor != null">
+            <ion-icon name="compass" color="primary"></ion-icon>
+            <ion-label>{{ detail?.alamat_kantor }}</ion-label>
+          </ion-chip>
+          <ion-chip *ngIf="detail?.email != null">
+            <ion-icon name="mail" color="primary"></ion-icon>
+            <ion-label>{{ detail?.email }}</ion-label>
+          </ion-chip>
+          <ion-chip *ngIf="detail?.notel != null">
+            <ion-icon name="call" color="primary"></ion-icon>
+            <ion-label>{{ detail?.notel }}</ion-label>
+          </ion-chip>
+        <!-- </div>   -->
+      </div>     
+  </div>
+  
+  </div>
+
+</ion-content>

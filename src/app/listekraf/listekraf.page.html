@@ -1,0 +1,38 @@
+<ion-header class="primary-header browse-page">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title >Ekraf</ion-title>
+    <!-- <ion-input class="search-icon" placeholder="Pangeran..." [routerLink]="'/search/hotel'" slot="end" style="text-align: left;"></ion-input>
+    <ion-icon name="search" color="light" slot="end" style="padding-left: 5px; padding-right: 5px;"></ion-icon> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="tarik untuk segarkan"
+        refreshingSpinner="circles"
+        refreshingText="Segarkan..."></ion-refresher-content>
+      </ion-refresher>
+    <div class="content_div support-page">
+    <div class="topics">
+      <!-- <ion-row>
+        <ion-col size="12" class="icon-home">
+          <h4 class="button-judul">Ekonomi Kreatif</h4>
+        </ion-col>
+      </ion-row> -->
+      <ion-row>
+        <ion-col size="6" class="icon-home" *ngFor="let item of itemsEkraf" [routerLink]="'/detail-ekraf/'+ item?.id" routerDirection="forward">
+          <div class="ion-text-wrap">
+            <img style="height:50px" src="{{path?.ekraf}}{{item.gambar}}" >
+            <h3 style="font-weight: bold;">{{item.nama}}</h3>
+            <h3>{{item.jumlah_pelaku}} Total Pelaku Usaha</h3>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    </div>
+</ion-content>

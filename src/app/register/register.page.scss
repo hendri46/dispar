@@ -1,0 +1,103 @@
+ion-content {
+    .auth-page {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        background: url(../../assets/images/auth-bg.jpg);
+        background-size: 100% 100%;
+        .watermark {
+            background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%);
+            background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%);
+            background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+
+        .auth-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            z-index: 2;
+            --ion-color-light:#fff;
+            color: var(--ion-color-light);
+            text-align: center;
+            .auth-title {
+                padding: 37px 37px 17px 37px;
+                display: block;
+                text-align: left;
+                margin-top: 30px;
+                h1 {
+                }
+
+            }
+            .content-zone {
+                // position: absolute;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%, -50%);
+                display: block;
+                padding: 0 37px;
+                width: inherit;
+                font-size: 14px;
+                ion-item {
+                    --ion-background-color:none;
+                    padding: 0 !important;
+                    --padding-start:0 !important;
+                    --border-color: var(--ion-color-light);
+                    ion-label, ion-input {
+                        --ion-color-light:#fff;
+                        color: var(--ion-color-light);
+                        font-size: 16px;
+
+                    }
+
+                }
+                .forgot-pass {
+                    background: none !important;
+                    border: none !important;
+                    margin-top: 20px;
+                    text-align: center;
+                    font-size: 14px;
+                }
+                .signup-button {
+                    display: block;
+                    --border-radius:7px;
+                    --box-shadow: 0 3px 6px rgba(0,0,0,0.45);
+                    min-height: 50px;
+                    margin-top: 30px;
+                }
+                .auth-text {}
+                .social-buttons {
+                    ion-button {
+                        --border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        margin: 5px;
+                        padding: 0 !important;
+                        line-height: 40px;
+                        text-align: center;
+                    }
+                    .facebook-icon {
+                        --background: #1B72CC !important;
+                    }
+                    .google-plus-icon {
+                        --background: #F34A38 !important;
+                    }
+                }
+                .auth-text-link {
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+    }
+}

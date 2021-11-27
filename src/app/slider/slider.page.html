@@ -1,0 +1,36 @@
+
+
+<ion-content>
+  <button ion-button class="slider-skip" (click)="goToSlide()">Lewati</button>
+  <ion-slides pager="true" [options]="slideOpts">
+    
+    <ion-slide>
+      <div class="slide-content">
+        <img src="{{path?.slide}}{{slider?.gambar_slide1}}" alt="">        
+        <h1>{{ slider?.judul_slide1 }}</h1>
+        <p>{{ slider?.keterangan_slide1 }}</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+        <div class="slide-content">
+          <img src="{{path?.slide}}{{slider?.gambar_slide2}}" alt="">        
+          <h1>{{ slider?.judul_slide2 }}</h1>
+          <p>{{ slider?.keterangan_slide2 }}</p>
+          </div>
+    </ion-slide>
+
+    <ion-slide>
+        <div class="slide-content">
+          <img src="{{path?.slide}}{{slider?.gambar_slide3}}" alt="">        
+          <h1>{{ slider?.judul_slide3 }}</h1>
+          <p>{{ slider?.keterangan_slide3 }}</p>
+            <div class="slider-buttons-zone">
+              <div class="slider-buttons">
+                <ion-button color="success" shape="round" routerLink="/tabs">Mulai</ion-button>
+              </div>              
+            </div>
+          </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
